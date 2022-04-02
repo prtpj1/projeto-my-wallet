@@ -9,11 +9,15 @@ class Wallet extends React.Component {
       <div>
         <header>
           <h1>TrybeWallet</h1>
-          <p>
-            {' '}
+          <p data-testid="email-field">
             Email:
-            {' '}
             {email}
+          </p>
+          <p data-testid="total-field">
+            0
+          </p>
+          <p data-testid="header-currency-field">
+            BRL
           </p>
         </header>
 
