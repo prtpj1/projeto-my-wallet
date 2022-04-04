@@ -3,10 +3,28 @@ import { connect } from 'react-redux';
 import propTypes from 'prop-types';
 
 import ExpenseTable from '../components/ExpenseTable';
+import Select from '../components/Select';
+import { actionFetchCurrencies } from '../actions';
 
 class Wallet extends React.Component {
+  componentDidMount() {
+    const { getWallet } = this.props;
+    getWallet();
+    // console.log(getWallet);
+  }
+
   render() {
-    const { currency, description, email, payMethod, tag, valor } = this.props;
+    const {
+      currencies,
+      description,
+      email,
+      payMethod,
+      valor,
+    } = this.props;
+
+    const tagOpts = ['Alimentação', 'Lazer', 'Saúde', 'Transporte', 'Trabalho'];
+    // console.log(currencies);
+
     return (
       <div>
         <header>
@@ -33,17 +51,16 @@ class Wallet extends React.Component {
               value={ valor }
             />
           </label>
-          <label htmlFor="currency">
-            Moeda:
-            <select
-              data-testid="currency-input"
+          <div data-testid="currency-input">
+            <Select
+              defaultOption={ currencies[0] }
               id="currency"
+              label="Moeda: "
               name="currency"
-              value={ currency }
-            >
-              <option>USD</option>
-            </select>
-          </label>
+              options={ currencies }
+              value={ currencies[0] }
+            />
+          </div>
           <label htmlFor="payMethod">
             Método de Pagamento:
             <select
@@ -57,21 +74,16 @@ class Wallet extends React.Component {
               <option>Cartão de débito</option>
             </select>
           </label>
-          <label htmlFor="tag">
-            Método de Pagamento:
-            <select
-              data-testid="tag-input"
+          <div data-testid="tag-input">
+            <Select
+              defaultOption="Selecione"
               id="tag"
+              label="Tag: "
               name="tag"
-              value={ tag }
-            >
-              <option>Alimentação</option>
-              <option>Lazer</option>
-              <option>Trabalho</option>
-              <option>Transporte</option>
-              <option>Saúde</option>
-            </select>
-          </label>
+              options={ tagOpts }
+            />
+          </div>
+
           <label htmlFor="descript">
             Descrição:
             <input
@@ -83,7 +95,6 @@ class Wallet extends React.Component {
             />
           </label>
           <button
-            // disabled={ disabled }
             // onClick={ this.handleClick }
             type="button"
           >
@@ -100,15 +111,51 @@ class Wallet extends React.Component {
 
 const mapStateToProps = (state) => ({
   email: state.user.email,
+  currencies: state.wallet.currencies,
+  // ifFetching: state.wallet.isFetching,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  getWallet: () => dispatch(actionFetchCurrencies()),
 });
 
 Wallet.propTypes = {
-  currency: propTypes.string.isRequired,
+  currencies: propTypes.string.isRequired,
   description: propTypes.string.isRequired,
   email: propTypes.string.isRequired,
+  getWallet: propTypes.func.isRequired,
   payMethod: propTypes.string.isRequired,
   valor: propTypes.string.isRequired,
-  tag: propTypes.string.isRequired,
+  // wallet: propTypes.string.isRequired,
 };
 
-export default connect(mapStateToProps)(Wallet);
+export default connect(mapStateToProps, mapDispatchToProps)(Wallet);
+
+/*
+          {/* <label htmlFor="currency">
+            Moeda:
+            <select
+              data-testid="currency-input"
+              id="currency"
+              name="currency"
+              value={ setCurrency }
+            >
+              <option>USD</option>
+            </select>
+          </label>
+<label htmlFor="tag">
+  Método de Pagamento:
+            <select
+    data-testid="tag-input"
+    id="tag"
+    name="tag"
+    value={ tag }
+  >
+    <option>Alimentação</option>
+    <option>Lazer</option>
+    <option>Trabalho</option>
+    <option>Transporte</option>
+    <option>Saúde</option>
+  </select>
+</label>;
+*/

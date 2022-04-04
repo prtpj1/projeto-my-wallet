@@ -1,24 +1,27 @@
 // Esse reducer será responsável por tratar o todas as informações relacionadas as despesas
 
-import { WALLET } from '../actions/index';
+import { REQUEST_WALLET, FETCH_WALLET_OK } from '../actions/index';
 
 const INITIAL_STATE = {
-  wallet: {
-    currencies: [],
-    expenses: [],
-  },
+  currencies: [],
+  expenses: [],
 };
 
 const wallet = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-  case WALLET:
+  case REQUEST_WALLET:
     return {
       ...state,
-      wallet: action.payload,
+    };
+  case FETCH_WALLET_OK:
+    return {
+      ...state,
+      currencies: action.currencies,
     };
   default:
     return state;
   }
 };
+// console.log(FETCH_WALLET_OK);
 
 export default wallet;

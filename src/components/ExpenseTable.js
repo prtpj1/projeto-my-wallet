@@ -1,3 +1,4 @@
+// import propTypes from 'prop-types';
 import React, { Component } from 'react';
 
 class ExpenseTable extends Component {
@@ -17,10 +18,21 @@ class ExpenseTable extends Component {
             <th>Moeda de conversão</th>
             <th>Editar/Excluir</th>
           </thead>
+          {/* <tbody>
+            {expenses.map((expense) => (
+              <tr key={ expense.id }>
+                <td>{expense.expenses}</td>
+              </tr>
+            ))}
+          </tbody> */}
         </table>
       </div>
     );
   }
 }
+
+// ExpenseTable.propTypes = {
+//   expenses: propTypes.arrayOf.isRequired,
+// };
 
 export default ExpenseTable;
