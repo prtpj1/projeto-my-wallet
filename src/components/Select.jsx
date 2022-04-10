@@ -4,10 +4,10 @@ import propTypes from 'prop-types';
 class Select extends Component {
   render() {
     const {
-      dataTestid,
+      // dataTestid,
       // defaultOption,
       // defaultValue,
-      id,
+      idSelect,
       label,
       name,
       onChange,
@@ -16,11 +16,11 @@ class Select extends Component {
     } = this.props;
     return (
       <div>
-        <label htmlFor={ id }>
+        <label htmlFor={ idSelect }>
           { label }
           <select
-            data-testid={ dataTestid }
-            id={ id }
+            // data-testid={ dataTestid }
+            id={ idSelect }
             name={ name }
             onChange={ onChange }
             value={ value }
@@ -29,7 +29,13 @@ class Select extends Component {
               {defaultOption}
             </option> */}
             {options.map((option, index) => (
-              <option key={ index }>{option}</option>
+              <option
+                key={ index }
+                id={ option }
+                value={ option }
+              >
+                {option}
+              </option>
             ))}
           </select>
         </label>
@@ -39,10 +45,10 @@ class Select extends Component {
 }
 
 Select.propTypes = {
-  dataTestid: propTypes.string.isRequired,
+  // dataTestid: propTypes.string.isRequired,
   // defaultOption: propTypes.string.isRequired,
   // defaultValue: propTypes.string.isRequired,
-  id: propTypes.string.isRequired,
+  idSelect: propTypes.string.isRequired,
   label: propTypes.string.isRequired,
   name: propTypes.string.isRequired,
   onChange: propTypes.func.isRequired,
