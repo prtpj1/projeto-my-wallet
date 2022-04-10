@@ -56,7 +56,7 @@ class Wallet extends React.Component {
   }
 
   render() {
-    const { email, currencies } = this.props;
+    const { currencies, email } = this.props;
     const {
       currency,
       description,
@@ -163,23 +163,21 @@ class Wallet extends React.Component {
           </button>
           <hr />
         </nav>
-        <main>
-          <table>
-            <thead>
-              <tr>
-                <th>Descrição</th>
-                <th>Tag</th>
-                <th>Método de pagamento</th>
-                <th>Valor</th>
-                <th>Moeda</th>
-                <th>Câmbio utilizado</th>
-                <th>Valor convertido</th>
-                <th>Moeda de conversão</th>
-                <th>Editar/Excluir</th>
-              </tr>
-            </thead>
-          </table>
-        </main>
+        <table>
+          <thead>
+            <tr>
+              <th>Descrição</th>
+              <th>Tag</th>
+              <th>Método de pagamento</th>
+              <th>Valor</th>
+              <th>Moeda</th>
+              <th>Câmbio utilizado</th>
+              <th>Valor convertido</th>
+              <th>Moeda de conversão</th>
+              <th>Editar/Excluir</th>
+            </tr>
+          </thead>
+        </table>
       </div>
     );
   }
