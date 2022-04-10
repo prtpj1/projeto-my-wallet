@@ -56,7 +56,7 @@ class Wallet extends React.Component {
   }
 
   render() {
-    const { currencies, email } = this.props;
+    const { currencies, email, expenses } = this.props;
     const {
       currency,
       description,
@@ -177,6 +177,23 @@ class Wallet extends React.Component {
               <th>Editar/Excluir</th>
             </tr>
           </thead>
+          <tbody>
+            {expenses.map((exp) => (
+              <tr key={ exp.id }>
+                <td>{exp.description}</td>
+                <td>{exp.tag}</td>
+                <td>{exp.method}</td>
+                <td>{(+exp.value).toFixed(2)}</td>
+                <td>{exp.exchangeRates[exp.currency].name}</td>
+                <td>{(+exp.exchangeRates[exp.currency].ask).toFixed(2)}</td>
+                <td>
+                  {((+exp.value)
+                * (+exp.exchangeRates[exp.currency].ask)).toFixed(2)}
+                </td>
+                <td>Real</td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     );
