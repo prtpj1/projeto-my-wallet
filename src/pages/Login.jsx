@@ -44,37 +44,48 @@ class Login extends React.Component {
     const { disabled } = this.state;
     const { email, password } = this.props;
     return (
-      <div>
-        <label htmlFor="email">
-          Email:
-          <input
-            data-testid="email-input"
-            id="email"
-            name="email"
-            onChange={ this.handleChange }
-            type="email"
-            value={ email }
-          />
-        </label>
-        <label htmlFor="password">
-          Password:
-          <input
-            data-testid="password-input"
-            id="password"
-            name="password"
-            onChange={ this.handleChange }
-            type="password"
-            value={ password }
-          />
-        </label>
+      <main className="login-container">
+        <section className="login-inputs-container">
+          <label
+            className="login-label"
+            htmlFor="email"
+          >
+            Email
+            <input
+              className="email login-input"
+              data-testid="email-input"
+              id="email"
+              name="email"
+              onChange={ this.handleChange }
+              type="email"
+              value={ email }
+            />
+          </label>
+          <label
+            className="login-label"
+            htmlFor="password"
+          >
+            Password
+            <input
+              className="password login-input"
+              data-testid="password-input"
+              id="password"
+              name="password"
+              onChange={ this.handleChange }
+              type="password"
+              value={ password }
+            />
+          </label>
+        </section>
         <button
+          className="button"
           disabled={ disabled }
           onClick={ this.handleClick }
           type="button"
         >
           Entrar
         </button>
-      </div>
+      </main>
     );
   }
 }

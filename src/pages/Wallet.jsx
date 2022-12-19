@@ -67,36 +67,48 @@ class Wallet extends React.Component {
 
     return (
       <div>
-        <header>
-          <h1>TrybeWallet</h1>
-          <hr />
-          <p data-testid="email-field">
-            Email:
-            {email}
-          </p>
-          <p data-testid="total-field">
-            {this.toRealExpenses()}
-          </p>
-          <p data-testid="header-currency-field">
-            BRL
-          </p>
+        <header className="header-container">
+          <h1 className="header-title">TrybeWallet</h1>
+          {/* <hr /> */}
+          <section className="heaer-user-data">
+            <p data-testid="email-field">
+              {/* Email: */}
+              {`Email: ${email}`}
+            </p>
+            <section className="header-currency-container">
+              <span data-testid="total-field">
+                {`$${this.toRealExpenses()}`}
+              </span>
+              <span data-testid="header-currency-field">
+                BRL
+              </span>
+            </section>
+          </section>
         </header>
-        <nav>
-          <hr />
-          <label htmlFor="valor">
+        <nav className="nav-container">
+          {/* <hr /> */}
+          <label
+            className="nav-label"
+            htmlFor="valor"
+          >
             Valor:
             <input
+              className="nav-input nav-value"
               data-testid="value-input"
               id="valor"
               name="value"
               onChange={ this.handleChange }
               type="number"
-              value={ value }
+              value={ (+value).toFixed(2) }
             />
           </label>
-          <label htmlFor="currency">
+          <label
+            className="nav-label"
+            htmlFor="currency"
+          >
             Moeda:
             <select
+              className="nav-input nav-currency"
               data-testid="currency-input"
               id="currency"
               name="currency"
@@ -114,9 +126,13 @@ class Wallet extends React.Component {
               ))}
             </select>
           </label>
-          <label htmlFor="method">
+          <label
+            className="nav-label"
+            htmlFor="method"
+          >
             Método de Pagamento:
             <select
+              className="nav-input nav-method"
               data-testid="method-input"
               id="method"
               name="method"
@@ -128,9 +144,13 @@ class Wallet extends React.Component {
               <option>Cartão de débito</option>
             </select>
           </label>
-          <label htmlFor="tag">
+          <label
+            className="nav-label"
+            htmlFor="tag"
+          >
             Tag:
             <select
+              className="nav-input nav-tag"
               data-testid="tag-input"
               id="tag"
               name="tag"
@@ -144,9 +164,13 @@ class Wallet extends React.Component {
               <option>Saúde</option>
             </select>
           </label>
-          <label htmlFor="description">
+          <label
+            className="nav-label"
+            htmlFor="description"
+          >
             Descrição:
             <input
+              className="nav-input nav-description"
               data-testid="description-input"
               id="description"
               name="description"
@@ -156,14 +180,15 @@ class Wallet extends React.Component {
             />
           </label>
           <button
+            className="button"
             onClick={ this.handleClick }
             type="submit"
           >
             Adicionar despesa
           </button>
-          <hr />
+          {/* <hr /> */}
         </nav>
-        <table>
+        <table className="table-container">
           <thead>
             <tr>
               <th>Descrição</th>
@@ -177,7 +202,7 @@ class Wallet extends React.Component {
               <th>Editar/Excluir</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="table-body">
             {expenses.map((exp) => (
               <tr key={ exp.id }>
                 <td>{exp.description}</td>
@@ -191,6 +216,14 @@ class Wallet extends React.Component {
                 * (+exp.exchangeRates[exp.currency].ask)).toFixed(2)}
                 </td>
                 <td>Real</td>
+                <div className="table-btns-container">
+                  <button className="button-editar" type="button">
+                    Editar
+                  </button>
+                  <button className="button-excluir" type="button">
+                    X
+                  </button>
+                </div>
               </tr>
             ))}
           </tbody>
