@@ -1,45 +1,213 @@
-html {
-  margin: 0 10px;
-}
-
+/* ?--------------------GENERAL-START------------------------- */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.button {
+  background-color: #3e1bda;
+  border-radius: 8px;
+  border-style: none;
+  color: #f8f7ff;
+  font-size: large;
+  height: 40px;
+  margin: 0 24px;
+  width: 180px;
 }
 
-@media ( prefers-reduced-motion : no-preference ) {
-
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+select {
+  background-color: white;
 }
 
-.App-header {
+/* ?--------------------GENERAL-END------------------------- */
+
+/* ?--------------------LOGIN-START------------------------- */
+.login-container {
+  align-content: space-between;
   align-items: center;
-  background-color: #282c34;
-  color: white;
+  background-color: #f8f7ff;
+  border-radius: 12px;
+  box-shadow: 5px 5px 9px rgba(27, 33, 43, 0.692);
   display: flex;
   flex-direction: column;
-  font-size: calc(10px + 2vmin);
-  justify-content: center;
-  min-height: 100vh;
+  height: 200px;
+  justify-content: space-evenly;
+  width: 300px;
 }
 
-.App-link {
-  color: #61dafb;
+.login-label {
+  color: #18095c;
 }
 
-@keyframes App-logo-spin {
-
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.login-inputs-container {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  width: 270px;
 }
+
+.login-input {
+  border: 1px solid rgb(187, 187, 187);
+  border-radius: 4px;
+  box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.45),
+    inset 1px 1px 2px rgba(94, 104, 121, 0.3);
+  height: 32px;
+  margin-left: 8px;
+  margin-top: 12px;
+  padding: 0 8px;
+}
+
+.email {
+  width: 200px;
+}
+
+.password {
+  width: 170px;
+}
+
+/* ?--------------------LOGIN-END------------------------- */
+
+/* ?--------------------HEADER-START------------------------- */
+.header-container {
+  align-items: center;
+  background-color: #f8f7ff;
+
+  /* border: 1px solid rgb(255, 94, 0); */
+  color: #18095c;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header-title {
+  padding-left: 24px;
+}
+
+.heaer-user-data {
+  align-items: center;
+
+  /* border: 1px solid rgb(44, 21, 250); */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 12px;
+  width: 500px;
+}
+
+.header-currency-container {
+  font-size: x-large;
+  font-weight: 900;
+}
+
+/* ?--------------------HEADER-end------------------------- */
+
+/* ?--------------------NAV-START------------------------- */
+.nav-container {
+  align-items: center;
+  background-color: #0f0736;
+  color: #fff7fe;
+  display: flex;
+  flex-direction: row;
+  font-size: small;
+  height: 10px;
+  justify-content: space-evenly;
+  padding: 24px 12px;
+}
+
+.nav-description {
+  width: 300px;
+}
+
+.nav-label {
+  align-items: center;
+
+  /* border: 1px solid rgb(0, 247, 255); */
+  display: flex;
+  font-size: medium;
+  padding: 0 8px;
+}
+
+.nav-input {
+  border: 1px solid white;
+  border-radius: 8px;
+  box-sizing: border-box;
+  height: 32px;
+  margin: 0 12px 0 8px;
+  padding-left: 8px;
+}
+
+/* ?--------------------NAV-END------------------------- */
+
+/* ?--------------------TABLE-START------------------------- */
+.table-container {
+  /* border: 1px solid rgb(255, 0, 0); */
+  border-collapse: collapse;
+  border-radius: 4px;
+  width: 100%;
+}
+
+thead {
+  /* border: 1px solid rgb(0, 247, 255); */
+  width: 100%;
+}
+
+th {
+  background-color: #23107e;
+
+  /* border: 1px dotted rgb(255, 115, 0); */
+  color: #f8f7ff;
+  padding: 8px 0;
+}
+
+td {
+  /* background-color: #f8f7ff; */
+
+  /* border: 1px solid rgb(255, 0, 221); */
+  padding: 12px 8px;
+  text-align: center;
+}
+
+tr {
+  background-color: #f8f7ff;
+  border-bottom: 1px solid #e0dafb;
+}
+
+tr:nth-child(even) {
+  background-color: #f0edfd;
+}
+
+tr:hover {
+  background-color: #3c18dc;
+  color: #f8f7ff;
+}
+
+.table-btns-container {
+  /* border: 1px solid rgb(255, 0, 221); */
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  padding: 1px 0;
+  width: 150px;
+}
+
+.button-editar {
+  background-color: #3e1bda;
+  /* border-radius: 8px; */
+  border-style: none;
+  color: #f8f7ff;
+  font-size: large;
+  height: 40px;
+  width: 100px;
+}
+
+.button-excluir {
+  background-color: #b30000;
+  border-style: none;
+  color: #f8f7ff;
+  font-size: large;
+  font-weight: 900;
+  height: 40px;
+  padding: 0;
+  width: 50px;
+}
+
+/* ?--------------------TABLE-END------------------------- */
