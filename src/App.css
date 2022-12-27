@@ -31,6 +31,7 @@ select {
   flex-direction: column;
   height: 200px;
   justify-content: space-evenly;
+  margin: 15% 40%;
   width: 300px;
 }
 
