@@ -15,9 +15,8 @@ Atualmente é possivel adicionar os gastos, selecionar a moeda, visualizar na ta
 * CSS
 * React
 * Redux
-* RTL
 
-<img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/JavaScript2.png" width="50" height="50" alt="JavaScript" /><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/html2.png" width="50" height="50" alt="HTML" /><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/CSS2.png" width="50" height="50" alt="CSS" /><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/React2.png" width="50" height="50" alt="React" /><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/Redux2.png" width="50" height="50" alt="Redux" /><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/RTL2.png" width="50" height="50" alt="RTL" />
+<img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/JavaScript2.png" width="50" height="50" alt="JavaScript" /><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/html2.png" width="50" height="50" alt="HTML" /><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/CSS2.png" width="50" height="50" alt="CSS" /><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/React2.png" width="50" height="50" alt="React" /><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/Redux2.png" width="50" height="50" alt="Redux" />
 
 <h2>Como rodar a aplicação?</h2>
 
