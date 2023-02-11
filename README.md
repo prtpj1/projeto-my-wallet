@@ -37,7 +37,7 @@ Atualmente é possivel adicionar os gastos, selecionar a moeda, visualizar na ta
 
 <h2>Demonstração da aplicação funcionando</h2>
 
-[Projeto Trybe Wallet](https://prtpj-trybe-wallet.netlify.app/)
+[Projeto Trybe Wallet](https://prtpj-my-wallet.netlify.app/)
 </br>
 </br>
 <!---->
