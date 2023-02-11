@@ -66,7 +66,7 @@ class Wallet extends React.Component {
     } = this.state;
 
     return (
-      <div>
+      <div className="wallet-container">
         <header className="header-container">
           <h1 className="header-title">TrybeWallet</h1>
           {/* <hr /> */}
