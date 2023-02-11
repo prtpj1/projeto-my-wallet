@@ -31,7 +31,6 @@ select {
   flex-direction: column;
   height: 200px;
   justify-content: space-evenly;
-  margin: 15% 40%;
   width: 300px;
 }
 
@@ -139,60 +138,9 @@ select {
 /* ?--------------------NAV-END------------------------- */
 
 /* ?--------------------TABLE-START------------------------- */
-.table-container {
-  /* border: 1px solid rgb(255, 0, 0); */
-  border-collapse: collapse;
-  border-radius: 4px;
-  width: 100%;
-}
-
-thead {
-  /* border: 1px solid rgb(0, 247, 255); */
-  width: 100%;
-}
-
-th {
-  background-color: #23107e;
-
-  /* border: 1px dotted rgb(255, 115, 0); */
-  color: #f8f7ff;
-  padding: 8px 0;
-}
-
-td {
-  /* background-color: #f8f7ff; */
-
-  /* border: 1px solid rgb(255, 0, 221); */
-  padding: 12px 8px;
-  text-align: center;
-}
-
-tr {
-  background-color: #f8f7ff;
-  border-bottom: 1px solid #e0dafb;
-}
-
-tr:nth-child(even) {
-  background-color: #f0edfd;
-}
-
-tr:hover {
-  background-color: #3c18dc;
-  color: #f8f7ff;
-}
-
-.table-btns-container {
-  /* border: 1px solid rgb(255, 0, 221); */
-  align-self: flex-end;
-  display: flex;
-  flex-direction: row;
-  padding: 1px 0;
-  width: 150px;
-}
 
 .button-editar {
   background-color: #3e1bda;
-  /* border-radius: 8px; */
   border-style: none;
   color: #f8f7ff;
   font-size: large;
@@ -209,6 +157,53 @@ tr:hover {
   height: 40px;
   padding: 0;
   width: 50px;
+}
+
+.table-container {
+  border-collapse: collapse;
+  border-radius: 4px;
+  width: 100%;
+}
+
+thead {
+  width: 100%;
+}
+
+th {
+  background-color: #23107e;
+  color: #f8f7ff;
+  padding: 8px 0;
+}
+
+td {
+  padding: 12px 8px;
+  text-align: center;
+}
+
+tr {
+  background-color: #f8f7ff;
+  border-bottom: 1px solid #e0dafb;
+}
+
+tr:nth-child( even ) {
+  background-color: #f0edfd;
+}
+
+tr:hover {
+  background-color: #3c18dc;
+  color: #f8f7ff;
+}
+
+.table-btns-container {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  padding: 1px 0;
+  width: 150px;
+}
+
+.wallet-container {
+  height: 100vh;
 }
 
 /* ?--------------------TABLE-END------------------------- */
