@@ -7,9 +7,9 @@ Fiz este projeto durante meu período de aprendizagem na Trybe onde desenvolvi u
 Atualmente é possivel adicionar os gastos, selecionar a moeda, visualizar na tabela com valores convertidos em reais separadamente e o valor total dos gastos também convertido em Reais. </br> </br>
 <i>Por enquanto ainda não foram implementadas as funcionalidades de editar e remover gastos.</i>
 
-<h2>Tecnologias Utilizadas</h2>
+# Tecnologias Utilizadas 
 
-<h4>FrontEnd:</h4>
+# FrontEnd: 
 
 * JavaScript
 * HTML
@@ -39,7 +39,11 @@ Atualmente é possivel adicionar os gastos, selecionar a moeda, visualizar na ta
 [AwesomeAPI](https://economia.awesomeapi.com.br/json/all)
 
 </br>
-<!---->
-<strong>OBS:</strong></br>
-<i>Na época que fiz este projeto eu ainda não conhecia os Conventional Commits. Somente a partir do módulo de BackEnd do curso da Trybe que aprendi e comecei a fazer commits melhores. </br> </br>
-  Em breve estarei disponibilizando também os projetos dos módulos de BackEnd e Ciência da Computação</i>
+</br>
+
+**OBS:**
+</br>
+*Na época que fiz este projeto eu ainda não conhecia os Conventional Commits. Somente a partir do módulo de BackEnd do curso da Trybe que aprendi e comecei a fazer commits melhores.
+</br>
+</br>
+Em breve estarei disponibilizando também os projetos dos módulos de **BackEnd** e **Ciência da Computação***
