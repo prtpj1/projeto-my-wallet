@@ -1,10 +1,11 @@
-# Projeto Trybe Wallet
-
+# 14º Projeto: Trybe Wallet
+<p align="center">
+  <img src="https://github.com/prtpj1/projeto-trybe-wallet/blob/main/Images/Preview.png" alt="Header" />
+</p>
+<hr/>
 Fiz este projeto durante meu período de aprendizagem na Trybe onde desenvolvi uma carteira virtual para controle de gastos que também possui um conversor de moedas. </br> </br>
 Atualmente é possivel adicionar os gastos, selecionar a moeda, visualizar na tabela com valores convertidos em reais separadamente e o valor total dos gastos também convertido em Reais. </br> </br>
-<i>Por enquanto ainda não foi implementadas as funcionalidades de editar e remover gastos.</i>
-
-<img src="https://github.com/prtpj1/projeto-trybe-wallet/blob/main/Images/Preview.png" alt="App Preview" />
+<i>Por enquanto ainda não foram implementadas as funcionalidades de editar e remover gastos.</i>
 
 <h2>Tecnologias Utilizadas</h2>
 
@@ -18,27 +19,25 @@ Atualmente é possivel adicionar os gastos, selecionar a moeda, visualizar na ta
 
 <img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/JavaScript2.png" width="50" height="50" alt="JavaScript" /><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/html2.png" width="50" height="50" alt="HTML" /><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/CSS2.png" width="50" height="50" alt="CSS" /><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/React2.png" width="50" height="50" alt="React" /><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/Redux2.png" width="50" height="50" alt="Redux" />
 
-<h2>Como rodar a aplicação?</h2>
+## Link para visualizar o site do projeto:
 
-1. Clone o repositório: </br>
+[Site do Projeto](https://prtpj-my-wallet.netlify.app/)
+
+## Como rodar a aplicação?
+
+1. Clone o repositório: <br>
 `git clone git@github.com:prtpj1/projeto-trybe-wallet.git` 
-
-2. Instale as dependências: </br>
+2. Instale as dependências: <br>
 `npm install`
-
-3. Inicie a aplicação: </br>
-`npm start` 
+3. Inicie a aplicação: <br>
+`npm start` <br>
+⚠️Aguarde a aplicação abrir no seu navegador. Caso não ocorra, coloque na barra de endereços do seu navegador: `http://localhost:3000/`
 </br>
-</br>
 
-<h2>Endpoint da API utilizada</h2>
+## Endpoint da API utilizada
 
 [AwesomeAPI](https://economia.awesomeapi.com.br/json/all)
 
-<h2>Demonstração da aplicação funcionando</h2>
-
-[Projeto Trybe Wallet](https://prtpj-my-wallet.netlify.app/)
-</br>
 </br>
 <!---->
 <strong>OBS:</strong></br>
