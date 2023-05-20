@@ -7,9 +7,9 @@ Fiz este projeto durante meu período de aprendizagem na Trybe onde desenvolvi u
 Atualmente é possivel adicionar os gastos, selecionar a moeda, visualizar na tabela com valores convertidos em reais separadamente e o valor total dos gastos também convertido em Reais. </br> </br>
 <i>Por enquanto ainda não foram implementadas as funcionalidades de editar e remover gastos.</i>
 
-# Tecnologias Utilizadas 
+## Tecnologias Utilizadas 
 
-# FrontEnd: 
+### FrontEnd: 
 
 * JavaScript
 * HTML
