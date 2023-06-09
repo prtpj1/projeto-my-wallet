@@ -24,12 +24,13 @@ Atualmente é possivel adicionar os gastos, selecionar a moeda, visualizar na ta
 [Site do Projeto](https://prtpj-my-wallet.netlify.app/)
 
 ## Como rodar a aplicação?
-
-1. Clone o repositório: <br>
-`git clone git@github.com:prtpj1/projeto-trybe-wallet.git` 
-2. Instale as dependências: <br>
+- Clone o repositório: <br>
+`git clone git@github.com:prtpj1/projeto-trybe-wallet.git`
+- Acesse a pasta do projeto: <br>
+`cd projeto-trybe-wallet`
+- Instale as dependências: <br>
 `npm install`
-3. Inicie a aplicação: <br>
+- Inicie a aplicação: <br>
 `npm start` <br>
 ⚠️Aguarde a aplicação abrir no seu navegador. Caso não ocorra, coloque na barra de endereços do seu navegador: `http://localhost:3000/`
 </br>
