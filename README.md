@@ -31,6 +31,7 @@ Currently, it is possible to add expenses, select the currency, view them in a t
 - Creating dispatchers in Redux for React applications
 - Connecting Redux to React components
 - Creating asynchronous actions in your React application that uses Redux.
+<hr/>
 
 ## According to the project requirements designated by Trybe, I learned how to:
 - ✅ Create a login home page with the specified fields and characteristics
@@ -43,6 +44,7 @@ Currently, it is possible to add expenses, select the currency, view them in a t
 - ✅ Implement the logic for the table to be fed by the application state
 - ❌ Create a button to delete an expense from the table with the specified characteristics
 - ❌ Create a button to edit an expense in the table with the specified characteristics
+<hr/>
 
 ## Stacks
 ### FrontEnd: 
@@ -53,6 +55,7 @@ Currently, it is possible to add expenses, select the currency, view them in a t
 - Redux
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github Imgs/JavaScript2.png" width="50" height="50" alt="JavaScript Icon" /></a><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github Imgs/html2.png" width="50" height="50" alt="HTML Icon" /></a><a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github Imgs/CSS2.png" width="50" height="50" alt="CSS3 Icon" /></a><a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github Imgs/React2.png" width="50" height="50" alt="React Icon" /></a><a href="https://redux.js.org/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github Imgs/Redux2.png" width="50" height="50" alt="Redux Icon" /></a>
+<hr/>
 
 ## How to Run the Application?
 - Clone the repository: <br>
@@ -87,6 +90,7 @@ Atualmente é possivel adicionar os gastos, selecionar a moeda, visualizar na ta
 - Criar dispatchers no Redux em aplicações React
 - Conectar Redux aos componentes React
 - Criar actions assíncronas na sua aplicação React que faz uso de Redux.
+<hr/>
 
 ## De acordo com os requisitos do projeto designados pela Trybe aprendi como:
 - ✅ Criar uma página inicial de login com os seguintes campos e características
@@ -99,6 +103,7 @@ Atualmente é possivel adicionar os gastos, selecionar a moeda, visualizar na ta
 - ✅ Implementar a lógica para que a tabela seja alimentada pelo estado da aplicação
 - ❌ Criar um botão para deletar uma despesa da tabela contendo as seguintes características
 - ❌ Criar um botão para editar uma despesa da tabela contendo as seguintes características
+<hr/>
 
 ## Tecnologias Utilizadas 
 ### FrontEnd: 
@@ -108,6 +113,7 @@ Atualmente é possivel adicionar os gastos, selecionar a moeda, visualizar na ta
 - React
 - Redux
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github Imgs/JavaScript2.png" width="50" height="50" alt="JavaScript Icon" /></a><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github Imgs/html2.png" width="50" height="50" alt="HTML Icon" /></a><a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github Imgs/CSS2.png" width="50" height="50" alt="CSS3 Icon" /></a><a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github Imgs/React2.png" width="50" height="50" alt="React Icon" /></a><a href="https://redux.js.org/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github Imgs/Redux2.png" width="50" height="50" alt="Redux Icon" /></a>
+<hr/>
 
 ## Como rodar a aplicação?
 - Clone o repositório: <br>
