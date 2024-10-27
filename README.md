@@ -112,6 +112,7 @@ Atualmente é possivel adicionar os gastos, selecionar a moeda, visualizar na ta
 - CSS
 - React
 - Redux
+
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github Imgs/JavaScript2.png" width="50" height="50" alt="JavaScript Icon" /></a><a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github Imgs/html2.png" width="50" height="50" alt="HTML Icon" /></a><a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github Imgs/CSS2.png" width="50" height="50" alt="CSS3 Icon" /></a><a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github Imgs/React2.png" width="50" height="50" alt="React Icon" /></a><a href="https://redux.js.org/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github Imgs/Redux2.png" width="50" height="50" alt="Redux Icon" /></a>
 <hr/>
 
