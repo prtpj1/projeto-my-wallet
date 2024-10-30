@@ -1,4 +1,4 @@
-# 14º Projeto: Trybe Wallet
+# 14º Projeto: My Wallet
 <p align="center">
   <img src="https://github.com/prtpj1/projeto-trybe-wallet/blob/main/Images/Preview.png" alt="Header" />
 </p>
