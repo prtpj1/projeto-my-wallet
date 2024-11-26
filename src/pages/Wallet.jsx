@@ -1,41 +1,58 @@
+/* eslint-disable max-lines */
 import React from 'react';
 import { connect } from 'react-redux';
 import propTypes, { string, func, arrayOf } from 'prop-types';
 
-import { thunkFetchCurrencies, thunkFetchExpenses } from '../actions';
+import { v4 as uuidv4 } from 'uuid';
+import { FaTrashAlt } from 'react-icons/fa';
+import { thunkFetchCurrencies, thunkFetchExpenses, deleteExpense } from '../actions';
+import ExpenseTableHead from '../components/ExpenseTableHead';
 
 class Wallet extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       id: 0,
-      value: '0',
-      description: '',
       currency: 'USD',
-      method: 'Dinheiro',
+      description: '',
+      method: '',
       tag: '',
+      value: '0.00',
     };
   }
 
   componentDidMount() {
     const { dispatch } = this.props;
     dispatch(thunkFetchCurrencies());
-    console.log(dispatch);
   }
 
-  handleClick = async (e) => {
+  clearInput = (e) => {
+    e.target.value = '';
+  }
+
+  handleBlur = (e) => {
+    const value = Number.parseFloat(e.target.value || 0.00).toFixed(2);
+    this.setState({ value });
+  }
+
+  handleClickAdd = async (e) => {
     e.preventDefault();
     const { dispatch } = this.props;
     dispatch(thunkFetchExpenses(this.state));
 
     this.setState((prevState) => ({
       id: prevState.id + 1,
-      value: '0',
-      description: '',
       currency: 'USD',
-      method: 'Dinheiro',
+      description: '',
+      method: '',
       tag: '',
+      value: '0.00',
     }));
+  }
+
+  handleClickDelete = (id) => {
+    const { dispatch } = this.props;
+    dispatch(deleteExpense(id));
   }
 
   toRealExpenses = () => {
@@ -46,7 +63,13 @@ class Wallet extends React.Component {
       return expValueRate;
     });
     const totalExpenses = toRealExp.reduce((acc, curr) => curr + acc, 0).toFixed(2);
-    return totalExpenses;
+    const formattedExpenses = new Intl.NumberFormat('pt-BR', {
+      style: 'currency',
+      currency: 'BRL',
+      minimumFractionDigits: 2,
+    }).format(totalExpenses);
+
+    return formattedExpenses;
   }
 
   handleChange = ({ target: { name, value } }) => {
@@ -68,25 +91,22 @@ class Wallet extends React.Component {
     return (
       <div className="wallet-container">
         <header className="header-container">
-          <h1 className="header-title">TrybeWallet</h1>
-          {/* <hr /> */}
-          <section className="heaer-user-data">
+          <h1 className="header-title">MyWallet</h1>
+          <section className="header-user-data">
             <p data-testid="email-field">
-              {/* Email: */}
               {`Email: ${email}`}
             </p>
             <section className="header-currency-container">
-              <span data-testid="total-field">
-                {`$${this.toRealExpenses()}`}
-              </span>
               <span data-testid="header-currency-field">
-                BRL
+                Total de despesas:
+              </span>
+              <span data-testid="total-field">
+                {` ${this.toRealExpenses()}`}
               </span>
             </section>
           </section>
         </header>
         <nav className="nav-container">
-          {/* <hr /> */}
           <label
             className="nav-label"
             htmlFor="valor"
@@ -98,8 +118,10 @@ class Wallet extends React.Component {
               id="valor"
               name="value"
               onChange={ this.handleChange }
+              onFocus={ this.clearInput }
               type="number"
-              value={ (+value).toFixed(2) }
+              onBlur={ (e) => this.handleBlur(e) }
+              value={ value }
             />
           </label>
           <label
@@ -115,9 +137,9 @@ class Wallet extends React.Component {
               onChange={ this.handleChange }
               value={ currency }
             >
-              {currencies.map((option, index) => (
+              {currencies.map((option) => (
                 <option
-                  key={ index }
+                  key={ uuidv4() }
                   id={ option }
                   value={ option }
                 >
@@ -139,6 +161,7 @@ class Wallet extends React.Component {
               onChange={ this.handleChange }
               value={ method }
             >
+              <option value="" disabled>Selecione uma opção</option>
               <option>Dinheiro</option>
               <option>Cartão de crédito</option>
               <option>Cartão de débito</option>
@@ -157,6 +180,7 @@ class Wallet extends React.Component {
               onChange={ this.handleChange }
               value={ tag }
             >
+              <option value="" disabled>Selecione uma opção</option>
               <option>Alimentação</option>
               <option>Lazer</option>
               <option>Trabalho</option>
@@ -177,57 +201,52 @@ class Wallet extends React.Component {
               type="text"
               onChange={ this.handleChange }
               value={ description }
+              placeholder="Descreva ou nomeie a despesa"
             />
           </label>
           <button
-            className="button"
-            onClick={ this.handleClick }
+            className="button btn-add-expense"
+            onClick={ this.handleClickAdd }
             type="submit"
           >
             Adicionar despesa
           </button>
-          {/* <hr /> */}
         </nav>
-        <table className="table-container">
-          <thead>
-            <tr>
-              <th>Descrição</th>
-              <th>Tag</th>
-              <th>Método de pagamento</th>
-              <th>Valor</th>
-              <th>Moeda</th>
-              <th>Câmbio utilizado</th>
-              <th>Valor convertido</th>
-              <th>Moeda de conversão</th>
-              <th>Editar/Excluir</th>
-            </tr>
-          </thead>
-          <tbody className="table-body">
-            {expenses.map((exp) => (
-              <tr key={ exp.id }>
-                <td>{exp.description}</td>
-                <td>{exp.tag}</td>
-                <td>{exp.method}</td>
-                <td>{(+exp.value).toFixed(2)}</td>
-                <td>{exp.exchangeRates[exp.currency].name}</td>
-                <td>{(+exp.exchangeRates[exp.currency].ask).toFixed(2)}</td>
-                <td>
-                  {((+exp.value)
+        <section className="table-container-wrapper">
+          <table className="table-container">
+            <ExpenseTableHead />
+            <tbody className="table-body">
+              {expenses.map((exp) => (
+                <tr key={ exp.id }>
+                  <td>{exp.description}</td>
+                  <td>{exp.tag}</td>
+                  <td>{exp.method}</td>
+                  <td>{(+exp.value).toFixed(2)}</td>
+                  <td>{exp.exchangeRates[exp.currency].name}</td>
+                  <td>{(+exp.exchangeRates[exp.currency].ask).toFixed(2)}</td>
+                  <td>
+                    {((+exp.value)
                 * (+exp.exchangeRates[exp.currency].ask)).toFixed(2)}
-                </td>
-                <td>Real</td>
-                <div className="table-btns-container">
-                  <button className="button-editar" type="button">
-                    Editar
-                  </button>
-                  <button className="button-excluir" type="button">
-                    X
-                  </button>
-                </div>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+                  </td>
+                  <td>Real</td>
+                  <div className="table-btns-container">
+                    <button className="button-editar" type="button">
+                      Editar
+                    </button>
+                    <button
+                      className="button-excluir"
+                      type="button"
+                      onClick={ () => this.handleClickDelete(exp.id) }
+                    >
+                      <FaTrashAlt size={ 15 } />
+                    </button>
+                  </div>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+
       </div>
     );
   }

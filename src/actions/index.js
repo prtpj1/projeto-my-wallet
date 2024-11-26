@@ -5,6 +5,7 @@ export const FETCH_EXPENSES = 'FETCH_EXPENSES';
 export const FETCH_WALLET_OK = 'FETCH_WALLET_OK';
 export const REQUEST_WALLET = 'REQUEST_WALLET';
 export const USER = 'USER';
+export const DELETE_EXPENSE = 'DELETE_EXPENSE';
 
 export const requestWalletSuccess = (currencies) => ({
   type: FETCH_WALLET_OK,
@@ -17,6 +18,11 @@ export const setExpenses = (expenses, exchangeRates) => ({
     ...expenses,
     exchangeRates,
   },
+});
+
+export const deleteExpense = (id) => ({
+  type: DELETE_EXPENSE,
+  id,
 });
 
 export const setUser = (payload) => ({ type: USER, payload });

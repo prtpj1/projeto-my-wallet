@@ -44,48 +44,51 @@ class Login extends React.Component {
     const { disabled } = this.state;
     const { email, password } = this.props;
     return (
-      <main className="login-container">
-        <section className="login-inputs-container">
-          <label
-            className="login-label"
-            htmlFor="email"
+      <div className="login-wrapper">
+        <main className="login-container">
+          <section className="login-inputs-container">
+            <label
+              className="login-label"
+              htmlFor="email"
+            >
+              Email
+              <input
+                className="email login-input"
+                data-testid="email-input"
+                id="email"
+                name="email"
+                onChange={ this.handleChange }
+                type="email"
+                value={ email }
+              />
+            </label>
+            <label
+              className="login-label"
+              htmlFor="password"
+            >
+              Password
+              <input
+                className="password login-input"
+                data-testid="password-input"
+                id="password"
+                name="password"
+                onChange={ this.handleChange }
+                type="password"
+                value={ password }
+              />
+            </label>
+          </section>
+          <button
+            className="button"
+            disabled={ disabled }
+            onClick={ this.handleClick }
+            type="button"
           >
-            Email
-            <input
-              className="email login-input"
-              data-testid="email-input"
-              id="email"
-              name="email"
-              onChange={ this.handleChange }
-              type="email"
-              value={ email }
-            />
-          </label>
-          <label
-            className="login-label"
-            htmlFor="password"
-          >
-            Password
-            <input
-              className="password login-input"
-              data-testid="password-input"
-              id="password"
-              name="password"
-              onChange={ this.handleChange }
-              type="password"
-              value={ password }
-            />
-          </label>
-        </section>
-        <button
-          className="button"
-          disabled={ disabled }
-          onClick={ this.handleClick }
-          type="button"
-        >
-          Entrar
-        </button>
-      </main>
+            Entrar
+          </button>
+        </main>
+      </div>
+
     );
   }
 }
