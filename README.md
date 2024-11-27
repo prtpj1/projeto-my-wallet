@@ -73,7 +73,7 @@ Currently, it is possible to add expenses, select the currency, view them in a t
 [AwesomeAPI](https://economia.awesomeapi.com.br/json/all)
 
 ## Link to View the Project's Website:
-[Project Website](https://prtpj-my-wallet.netlify.app/)
+[Project Website](https://my-wallet-mu-six.vercel.app/)
 </br>
 </br>
 _*NOTE: If you encounter any difficulties with the instructions and would like to provide feedback, feel free to send me a message.*_
@@ -132,7 +132,7 @@ Atualmente é possivel adicionar os gastos, selecionar a moeda, visualizar na ta
 [AwesomeAPI](https://economia.awesomeapi.com.br/json/all)
 
 ## Link para visualizar o site do projeto:
-[Site do Projeto](https://prtpj-my-wallet.netlify.app/)
+[Site do Projeto](https://my-wallet-mu-six.vercel.app/)
 </br>
 </br>
 _*OBS: Se tiver alguma dificuldade com as instruções e quiser dar um feedback me mande uma mensagem*_
