@@ -1,0 +1,81 @@
+.table__wrapper {
+  overflow: auto;
+
+  display: flex;
+  flex-direction: row;
+
+  width: 100vw;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.table__container {
+  min-width: 100%;
+
+  border-collapse: collapse;
+}
+
+.table__container td,
+.table__container th {
+  font-size: var(--fs-xs);
+  text-align: center;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+th {
+  padding: 0.4rem 0.9rem;
+
+  color: var(--clr-text-light);
+
+  background-color: var(--clr-bg-secondary);
+}
+
+td {
+  padding: 0.3rem 0.9rem;
+}
+
+tr {
+  background-color: var(--clr-bg-table);
+}
+
+tr:nth-child(even) {
+  background-color: var(--clr-bg-table-even);
+}
+
+tr:hover {
+  color: var(--clr-text-light);
+
+  background-color: var(--clr-bg-hover);
+}
+
+.table__btns {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  padding: 0.2rem 0;
+}
+
+.table__btn {
+  border-radius: 0.5rem;
+  border-style: none;
+
+  color: var(--clr-text-button);
+
+  cursor: pointer;
+}
+
+.btn__editar {
+  padding: 0.4rem 0.5rem 0.3rem 0.7rem;
+
+  background-color: var(--clr-bg-button);
+  cursor: not-allowed;
+}
+
+.btn__excluir {
+  margin-right: 0.8rem;
+  padding: 0.4rem 0.6rem 0.3rem 0.5rem;
+
+  background-color: var(--clr-alert);
+}

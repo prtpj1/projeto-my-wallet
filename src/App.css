@@ -1,209 +1,104 @@
-/* ?--------------------GENERAL-START------------------------- */
-.App {
-  text-align: center;
+@import './pages/login/login.css';
+@import './pages/wallet/wallet_header.css';
+@import './pages/wallet/wallet_navbar.css';
+@import './pages/wallet/wallet_table.css';
+
+/* 
+background-color: rgba(255, 0, 191, 0.549);
+outline: 3px solid rgb(255, 0, 0); 
+*/
+
+:root {
+  --clr-alert: hsl(0, 100%, 35%);
+  --clr-primary: hsl(251, 78%, 19%);
+  --clr-secondary: hsl(251, 55%, 57%);
+  --clr-tertiary: hsl(251, 97%, 86%);
+  --clr-highlight: hsl(36, 100%, 50%);
+
+  --clr-shadow-black: hsla(0, 0%, 11%, 0.928);
+  --clr-shadow-colored: hsla(251, 100%, 73%, 0.385);
+
+  --clr-bg-primary: hsl(0, 0%, 95%);
+  --clr-bg-secondary: hsl(250, 100%, 41%);
+
+  --clr-bg-body: var(--clr-primary);
+  --clr-bg-button: var(--clr-bg-secondary);
+  --clr-bg-disable: var(--clr-tertiary);
+  --clr-bg-header: var(--clr-bg-primary);
+  --clr-bg-hover: var(--clr-secondary);
+  --clr-bg-focus: var(--clr-bg-secondary);
+  --clr-bg-nav: var(--clr-primary);
+  --clr-bg-table: var(--clr-bg-primary);
+  --clr-bg-table-even: var(--clr-tertiary);
+
+  --clr-text-primary: var(--clr-primary);
+  --clr-text-secondary: var(--clr-secondary);
+
+  --clr-text-button: var(--clr-bg-primary);
+  --clr-text-light: var(--clr-bg-primary);
+
+  --clr-border: var(--clr-tertiary);
+
+  --ff-primary: 'Roboto', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+
+  --fs-xxs: 0.8rem;
+  --fs-xs: 1rem;
+  --fs-sm: 1.2rem;
+  --fs-md: 1.6rem;
+  --fs-lg: 1.8rem;
+  --fs-xl: 2rem;
+  --fs-2xl: 3rem;
+  --fs-3xl: 5rem;
+
+  --fw-bold: 900;
+  --fw-semi-bold: 700;
+  --fw-regular: 400;
 }
 
-.button {
-  background-color: #3e1bda;
-  border-radius: 8px;
-  border-style: none;
-  color: #f8f7ff;
-  font-size: large;
-  height: 40px;
-  margin: 0 24px;
-  width: 180px;
-}
-
-select {
-  background-color: white;
-}
-
-/* ?--------------------GENERAL-END------------------------- */
-
-/* ?--------------------LOGIN-START------------------------- */
-.login-container {
-  align-content: space-between;
-  align-items: center;
-  background-color: #f8f7ff;
-  border-radius: 12px;
-  box-shadow: 5px 5px 9px rgba(27, 33, 43, 0.692);
-  display: flex;
-  flex-direction: column;
-  height: 200px;
-  justify-content: space-evenly;
-  width: 300px;
-}
-
-.login-label {
-  color: #18095c;
-}
-
-.login-inputs-container {
-  display: flex;
-  flex-direction: column;
-  height: 100px;
-  width: 270px;
-}
-
-.login-input {
-  border: 1px solid rgb(187, 187, 187);
-  border-radius: 4px;
-  box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.45),
-    inset 1px 1px 2px rgba(94, 104, 121, 0.3);
-  height: 32px;
-  margin-left: 8px;
-  margin-top: 12px;
-  padding: 0 8px;
-}
-
-.email {
-  width: 200px;
-}
-
-.password {
-  width: 170px;
-}
-
-/* ?--------------------LOGIN-END------------------------- */
-
-/* ?--------------------HEADER-START------------------------- */
-.header-container {
-  align-items: center;
-  background-color: #f8f7ff;
-
-  /* border: 1px solid rgb(255, 94, 0); */
-  color: #18095c;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.header-title {
-  padding-left: 24px;
-}
-
-.heaer-user-data {
-  align-items: center;
-
-  /* border: 1px solid rgb(44, 21, 250); */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0 12px;
-  width: 500px;
-}
-
-.header-currency-container {
-  font-size: x-large;
-  font-weight: 900;
-}
-
-/* ?--------------------HEADER-end------------------------- */
-
-/* ?--------------------NAV-START------------------------- */
-.nav-container {
-  align-items: center;
-  background-color: #0f0736;
-  color: #fff7fe;
-  display: flex;
-  flex-direction: row;
-  font-size: small;
-  height: 10px;
-  justify-content: space-evenly;
-  padding: 24px 12px;
-}
-
-.nav-description {
-  width: 300px;
-}
-
-.nav-label {
-  align-items: center;
-
-  /* border: 1px solid rgb(0, 247, 255); */
-  display: flex;
-  font-size: medium;
-  padding: 0 8px;
-}
-
-.nav-input {
-  border: 1px solid white;
-  border-radius: 8px;
+* {
+  border: 0;
   box-sizing: border-box;
-  height: 32px;
-  margin: 0 12px 0 8px;
-  padding-left: 8px;
-}
-
-/* ?--------------------NAV-END------------------------- */
-
-/* ?--------------------TABLE-START------------------------- */
-
-.button-editar {
-  background-color: #3e1bda;
-  border-style: none;
-  color: #f8f7ff;
-  font-size: large;
-  height: 40px;
-  width: 100px;
-}
-
-.button-excluir {
-  background-color: #b30000;
-  border-style: none;
-  color: #f8f7ff;
-  font-size: large;
-  font-weight: 900;
-  height: 40px;
+  margin: 0;
   padding: 0;
-  width: 50px;
 }
 
-.table-container {
-  border-collapse: collapse;
-  border-radius: 4px;
-  width: 100%;
+*:focus {
+  outline: 4px solid var(--clr-highlight);
 }
 
-thead {
-  width: 100%;
-}
-
-th {
-  background-color: #23107e;
-  color: #f8f7ff;
-  padding: 8px 0;
-}
-
-td {
-  padding: 12px 8px;
-  text-align: center;
-}
-
-tr {
-  background-color: #f8f7ff;
-  border-bottom: 1px solid #e0dafb;
-}
-
-tr:nth-child( even ) {
-  background-color: #f0edfd;
-}
-
-tr:hover {
-  background-color: #3c18dc;
-  color: #f8f7ff;
-}
-
-.table-btns-container {
-  align-self: flex-end;
+body {
+  align-content: center;
+  align-items: center;
+  background-color: var(--clr-bg-body);
+  color: var(--clr-primary);
   display: flex;
-  flex-direction: row;
-  padding: 1px 0;
-  width: 150px;
+  font-family: var(--ff-primary);
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scrollbar-width: none;
 }
 
-.wallet-container {
-  height: 100vh;
+.App {
+  text-align: initial;
 }
 
-/* ?--------------------TABLE-END------------------------- */
+.btn {
+  background-color: var(--clr-bg-button);
+  border-radius: 0.5rem;
+  border-style: none;
+  color: var(--clr-text-button);
+  cursor: pointer;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semi-bold);
+  padding: 0.7rem 1rem;
+  width: 13rem;
+}
+
+.btn:disabled {
+  background-color: var(--clr-bg-disable);
+  cursor: not-allowed;
+}
+
+.wallet__container {
+  width: 100%;
+}

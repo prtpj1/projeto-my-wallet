@@ -2,7 +2,7 @@ import React from 'react';
 import propTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import { setUser } from '../actions/index';
+import { setUser } from '../../actions/index';
 
 class Login extends React.Component {
   constructor(props) {
@@ -36,7 +36,6 @@ class Login extends React.Component {
     const btnState = (email.match(validEmail) && password.length >= minSizePassWord)
       ? this.setState({ disabled: false })
       : this.setState({ disabled: true });
-    // console.log(btnState);
     return btnState;
   };
 
@@ -44,9 +43,9 @@ class Login extends React.Component {
     const { disabled } = this.state;
     const { email, password } = this.props;
     return (
-      <div className="login-wrapper">
-        <main className="login-container">
-          <section className="login-inputs-container">
+      <div className="login__wrapper">
+        <main className="login__container">
+          <section className="login-inputs__container">
             <label
               className="login-label"
               htmlFor="email"
@@ -58,6 +57,7 @@ class Login extends React.Component {
                 id="email"
                 name="email"
                 onChange={ this.handleChange }
+                placeholder="your_email@email.com"
                 type="email"
                 value={ email }
               />
@@ -73,13 +73,14 @@ class Login extends React.Component {
                 id="password"
                 name="password"
                 onChange={ this.handleChange }
+                placeholder="your password"
                 type="password"
                 value={ password }
               />
             </label>
           </section>
           <button
-            className="button"
+            className="btn"
             disabled={ disabled }
             onClick={ this.handleClick }
             type="button"

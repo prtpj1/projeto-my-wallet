@@ -4,9 +4,10 @@ import { connect } from 'react-redux';
 import propTypes, { string, func, arrayOf } from 'prop-types';
 
 import { v4 as uuidv4 } from 'uuid';
-import { FaTrashAlt } from 'react-icons/fa';
-import { thunkFetchCurrencies, thunkFetchExpenses, deleteExpense } from '../actions';
-import ExpenseTableHead from '../components/ExpenseTableHead';
+import { FaTrashAlt, FaRegEdit } from 'react-icons/fa';
+
+import { thunkFetchCurrencies, thunkFetchExpenses, deleteExpense } from '../../actions';
+import ExpenseTableHead from '../../components/ExpenseTableHead';
 
 class Wallet extends React.Component {
   constructor(props) {
@@ -89,14 +90,14 @@ class Wallet extends React.Component {
     } = this.state;
 
     return (
-      <div className="wallet-container">
-        <header className="header-container">
-          <h1 className="header-title">MyWallet</h1>
-          <section className="header-user-data">
+      <div className="wallet__container">
+        <header className="header">
+          <h1 className="header__title">MyWallet</h1>
+          <section className="header__user-data">
             <p data-testid="email-field">
               {`Email: ${email}`}
             </p>
-            <section className="header-currency-container">
+            <section className="header__currency-container">
               <span data-testid="header-currency-field">
                 Total de despesas:
               </span>
@@ -106,14 +107,14 @@ class Wallet extends React.Component {
             </section>
           </section>
         </header>
-        <nav className="nav-container">
+        <nav className="nav">
           <label
-            className="nav-label"
+            className="nav__label"
             htmlFor="valor"
           >
             Valor:
             <input
-              className="nav-input nav-value"
+              className="nav__input nav__value"
               data-testid="value-input"
               id="valor"
               name="value"
@@ -125,12 +126,12 @@ class Wallet extends React.Component {
             />
           </label>
           <label
-            className="nav-label"
+            className="nav__label"
             htmlFor="currency"
           >
             Moeda:
             <select
-              className="nav-input nav-currency"
+              className="nav__input nav__currency"
               data-testid="currency-input"
               id="currency"
               name="currency"
@@ -149,12 +150,12 @@ class Wallet extends React.Component {
             </select>
           </label>
           <label
-            className="nav-label"
+            className="nav__label"
             htmlFor="method"
           >
             Método de Pagamento:
             <select
-              className="nav-input nav-method"
+              className="nav__input nav__method"
               data-testid="method-input"
               id="method"
               name="method"
@@ -168,12 +169,12 @@ class Wallet extends React.Component {
             </select>
           </label>
           <label
-            className="nav-label"
+            className="nav__label"
             htmlFor="tag"
           >
             Tag:
             <select
-              className="nav-input nav-tag"
+              className="nav__input nav__tag"
               data-testid="tag-input"
               id="tag"
               name="tag"
@@ -189,12 +190,12 @@ class Wallet extends React.Component {
             </select>
           </label>
           <label
-            className="nav-label"
+            className="nav__label-description"
             htmlFor="description"
           >
             Descrição:
             <input
-              className="nav-input nav-description"
+              className="nav__input nav__input-description"
               data-testid="description-input"
               id="description"
               name="description"
@@ -205,17 +206,17 @@ class Wallet extends React.Component {
             />
           </label>
           <button
-            className="button btn-add-expense"
+            className="btn btn__add-expense"
             onClick={ this.handleClickAdd }
             type="submit"
           >
             Adicionar despesa
           </button>
         </nav>
-        <section className="table-container-wrapper">
-          <table className="table-container">
+        <section className="table__wrapper">
+          <table className="table__container">
             <ExpenseTableHead />
-            <tbody className="table-body">
+            <tbody className="table__body">
               {expenses.map((exp) => (
                 <tr key={ exp.id }>
                   <td>{exp.description}</td>
@@ -229,16 +230,16 @@ class Wallet extends React.Component {
                 * (+exp.exchangeRates[exp.currency].ask)).toFixed(2)}
                   </td>
                   <td>Real</td>
-                  <div className="table-btns-container">
-                    <button className="button-editar" type="button">
-                      Editar
+                  <div className="table__btns">
+                    <button className="table__btn btn__editar" type="button">
+                      <FaRegEdit size={ 20 } />
                     </button>
                     <button
-                      className="button-excluir"
+                      className="table__btn btn__excluir"
                       type="button"
                       onClick={ () => this.handleClickDelete(exp.id) }
                     >
-                      <FaTrashAlt size={ 15 } />
+                      <FaTrashAlt size={ 18 } />
                     </button>
                   </div>
                 </tr>
