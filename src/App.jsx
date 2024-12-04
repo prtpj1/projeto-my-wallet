@@ -3,13 +3,17 @@ import { Switch, Route } from 'react-router-dom';
 
 import Login from './pages/login/Login';
 import Wallet from './pages/wallet/Wallet';
+import GitHubRepo from './components/github-repo/GitHubRepo';
 
 function App() {
   return (
-    <Switch>
-      <Route exact path="/" component={ Login } />
-      <Route exact path="/carteira" component={ Wallet } />
-    </Switch>
+    <div>
+      <Switch>
+        <Route exact path="/" component={ Login } />
+        <Route exact path="/carteira" component={ Wallet } />
+      </Switch>
+      <GitHubRepo />
+    </div>
   );
 }
 

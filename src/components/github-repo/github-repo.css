@@ -1,0 +1,31 @@
+.btn-github {
+  border-top: 2px solid hsl(0, 0%, 57%);
+  border-left: 2px solid hsl(0, 0%, 57%);
+  border-radius: 0.5rem 0 0 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+
+  padding: 0.5rem 0.6rem;
+
+  color: hsl(0, 0%, 95%);
+  font-size: 0.5rem;
+  font-weight: var(--fw-semi-bold);
+  text-decoration: none;
+
+  background-color: hsl(0, 0%, 6%);
+  cursor: pointer;
+}
+.btn-github:hover {
+  background-color: hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 6%);
+}
+
+.btn-github:active {
+  transform: scale(0.95);
+}

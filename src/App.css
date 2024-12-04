@@ -2,6 +2,7 @@
 @import './components/header/header.css';
 @import './/components/nav-bar/nav-bar.css';
 @import './components/expense-table/expense-table.css';
+@import './components/github-repo/github-repo.css';
 /* 
 background-color: rgba(255, 0, 191, 0.549);
 outline: 3px solid rgb(255, 0, 0); 
@@ -82,15 +83,18 @@ body {
 }
 
 .btn {
-  background-color: var(--clr-bg-button);
   border-radius: 0.5rem;
   border-style: none;
+
+  width: 13rem;
+  padding: 0.7rem 1rem;
+
   color: var(--clr-text-button);
-  cursor: pointer;
   font-size: var(--fs-sm);
   font-weight: var(--fw-semi-bold);
-  padding: 0.7rem 1rem;
-  width: 13rem;
+
+  background-color: var(--clr-bg-button);
+  cursor: pointer;
 }
 
 .btn:disabled {

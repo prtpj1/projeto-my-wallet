@@ -5,6 +5,7 @@
   flex-direction: row;
 
   width: 100vw;
+  padding-bottom: 3rem;
 
   -webkit-overflow-scrolling: touch;
 }
