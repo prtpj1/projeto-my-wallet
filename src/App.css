@@ -1,8 +1,7 @@
 @import './pages/login/login.css';
-@import './pages/wallet/wallet_header.css';
-@import './pages/wallet/wallet_navbar.css';
-@import './pages/wallet/wallet_table.css';
-
+@import './components/header/header.css';
+@import './/components/nav-bar/nav-bar.css';
+@import './components/expense-table/expense-table.css';
 /* 
 background-color: rgba(255, 0, 191, 0.549);
 outline: 3px solid rgb(255, 0, 0); 
