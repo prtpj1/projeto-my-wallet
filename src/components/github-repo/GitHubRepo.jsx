@@ -7,7 +7,7 @@ const GitHubRepo = () => (
     type="button"
     href="https://github.com/prtpj1/projeto-my-wallet"
     target="_blank"
-    rel="noreferrer"
+    rel="noopener noreferrer"
   >
     <FaGithub size={ 20 } />
     <h1>Project Repository</h1>
