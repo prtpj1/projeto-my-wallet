@@ -67,11 +67,14 @@ tr:hover {
   cursor: pointer;
 }
 
+.table__btn:hover {
+  background-color: var(--clr-highlight);
+}
+
 .btn__editar {
   padding: 0.4rem 0.5rem 0.3rem 0.7rem;
 
   background-color: var(--clr-bg-button);
-  cursor: not-allowed;
 }
 
 .btn__excluir {

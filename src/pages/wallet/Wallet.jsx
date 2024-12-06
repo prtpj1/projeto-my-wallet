@@ -6,6 +6,7 @@ import { thunkFetchCurrencies, thunkFetchExpenses, deleteExpense } from '../../a
 import Header from '../../components/header/Header';
 import ExpenseTable from '../../components/expense-table/ExpenseTable';
 import NavBar from '../../components/nav-bar/NavBar';
+import ModalEditExpenses from '../../components/modals/ModalEditExpenses';
 
 class Wallet extends React.Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class Wallet extends React.Component {
       method: '',
       tag: '',
       value: '0.00',
+      editExpense: null,
     };
   }
 
@@ -51,6 +53,12 @@ class Wallet extends React.Component {
     this.setState({ value });
   };
 
+  handleChange = ({ target: { name, value } }) => {
+    this.setState({
+      [name]: value,
+    });
+  };
+
   handleClickAdd = async (e) => {
     e.preventDefault();
     const { dispatch } = this.props;
@@ -66,11 +74,52 @@ class Wallet extends React.Component {
     }));
   };
 
-  handleChange = ({ target: { name, value } }) => {
-    this.setState({
-      [name]: value,
-    });
-  };
+handleClickEdit = (expense) => {
+  this.setState({
+    editExpense: expense,
+  });
+}
+
+handleEdit = async (e) => {
+  e.preventDefault();
+  const { dispatch } = this.props;
+  const {
+    editingId,
+    editExpense,
+    value,
+    description,
+    currency,
+    method,
+    tag,
+  } = this.state;
+
+  const updateExpense = {
+    editingId,
+    editExpense,
+    value,
+    description,
+    currency,
+    method,
+    tag };
+  dispatch(updateExpense);
+
+  this.setState({
+    id: 0,
+    currency: 'USD',
+    description: '',
+    method: '',
+    tag: '',
+    value: '0.00',
+    editingId: null,
+    editExpense: {},
+  });
+}
+
+handleCloseModal = () => {
+  this.setState({
+    editExpense: null,
+  });
+}
 
 handleClickDelete = (id) => {
   const { dispatch } = this.props;
@@ -79,7 +128,7 @@ handleClickDelete = (id) => {
 
 render() {
   const { currencies, email, expenses } = this.props;
-  const { currency, description, method, tag, value } = this.state;
+  const { currency, description, method, tag, value, editExpense } = this.state;
 
   const formState = { value, currency, method, tag, description };
   const formActions = {
@@ -91,6 +140,12 @@ render() {
 
   return (
     <div className="wallet__container">
+      {editExpense && (
+        <ModalEditExpenses
+          expense={ editExpense }
+          onClose={ this.handleCloseModal }
+        />
+      )}
       <Header email={ email } totalExpenses={ this.toRealExpenses() } />
       <NavBar
         formState={ formState }
@@ -99,6 +154,7 @@ render() {
       />
       <ExpenseTable
         expenses={ expenses }
+        handleClickEdit={ this.handleClickEdit }
         handleClickDelete={ this.handleClickDelete }
       />
     </div>

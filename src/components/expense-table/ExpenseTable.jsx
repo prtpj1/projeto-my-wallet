@@ -3,7 +3,7 @@ import { FaTrashAlt, FaRegEdit } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import ExpenseTableHead from './ExpenseTableHead';
 
-const ExpenseTable = ({ expenses, handleClickDelete }) => (
+const ExpenseTable = ({ expenses, handleClickDelete, handleClickEdit }) => (
   <section className="table__wrapper">
     <table className="table__container">
       <ExpenseTableHead />
@@ -22,7 +22,12 @@ const ExpenseTable = ({ expenses, handleClickDelete }) => (
             </td>
             <td>Real</td>
             <div className="table__btns">
-              <button className="table__btn btn__editar" type="button">
+              <button
+                className="table__btn btn__editar"
+                onClick={ () => handleClickEdit(exp) }
+                type="button"
+
+              >
                 <FaRegEdit size={ 20 } />
               </button>
               <button
@@ -42,6 +47,7 @@ const ExpenseTable = ({ expenses, handleClickDelete }) => (
 
 ExpenseTable.propTypes = {
   expenses: PropTypes.arrayOf(PropTypes.object).isRequired,
+  handleClickEdit: PropTypes.func.isRequired,
   handleClickDelete: PropTypes.func.isRequired,
 };
 

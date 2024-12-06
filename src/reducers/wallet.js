@@ -5,6 +5,7 @@ import {
   FETCH_WALLET_OK,
   FETCH_EXPENSES,
   DELETE_EXPENSE,
+  EDIT_EXPENSE,
 } from '../actions/index';
 
 const INITIAL_STATE = {
@@ -30,6 +31,12 @@ const wallet = (state = INITIAL_STATE, action) => {
         ...state.expenses,
         action.expenses,
       ],
+    };
+  case EDIT_EXPENSE:
+    return {
+      ...state,
+      expenses: state.expenses
+        .map((expense) => (expense.id === action.expense.id ? action.expense : expense)),
     };
   case DELETE_EXPENSE:
     return {
