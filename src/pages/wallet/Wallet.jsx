@@ -17,7 +17,7 @@ class Wallet extends React.Component {
       description: '',
       method: '',
       tag: '',
-      value: '0.00',
+      value: '1.00',
       editExpense: null,
     };
   }
@@ -49,7 +49,7 @@ class Wallet extends React.Component {
   };
 
   handleBlur = (e) => {
-    const value = Number.parseFloat(e.target.value || 0.00).toFixed(2);
+    const value = Number.parseFloat(e.target.value || 1.00).toFixed(2);
     this.setState({ value });
   };
 
@@ -70,7 +70,7 @@ class Wallet extends React.Component {
       description: '',
       method: '',
       tag: '',
-      value: '0.00',
+      value: '1.00',
     }));
   };
 
@@ -109,7 +109,7 @@ handleEdit = async (e) => {
     description: '',
     method: '',
     tag: '',
-    value: '0.00',
+    value: '1.00',
     editingId: null,
     editExpense: {},
   });

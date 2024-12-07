@@ -17,10 +17,11 @@ const NavBar = ({ formState, formActions, currencies }) => {
           data-testid="value-input"
           id="valor"
           name="value"
+          onBlur={ (e) => handleBlur(e) }
           onChange={ handleChange }
           onFocus={ clearInput }
+          required
           type="number"
-          onBlur={ (e) => handleBlur(e) }
           value={ value }
         />
       </label>
@@ -35,6 +36,7 @@ const NavBar = ({ formState, formActions, currencies }) => {
           id="currency"
           name="currency"
           onChange={ handleChange }
+          required
           value={ currency }
         >
           {currencies.map((option) => (
@@ -59,6 +61,7 @@ const NavBar = ({ formState, formActions, currencies }) => {
           id="method"
           name="method"
           onChange={ handleChange }
+          required
           value={ method }
         >
           <option value="" disabled>Selecione uma opção</option>
@@ -78,6 +81,7 @@ const NavBar = ({ formState, formActions, currencies }) => {
           id="tag"
           name="tag"
           onChange={ handleChange }
+          required
           value={ tag }
         >
           <option value="" disabled>Selecione uma opção</option>
@@ -98,10 +102,11 @@ const NavBar = ({ formState, formActions, currencies }) => {
           data-testid="description-input"
           id="description"
           name="description"
-          type="text"
           onChange={ handleChange }
-          value={ description }
           placeholder="Descreva ou nomeie a despesa"
+          required
+          type="text"
+          value={ description }
         />
       </label>
       <button

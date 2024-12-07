@@ -15,6 +15,7 @@ outline: 3px solid rgb(255, 0, 0);
   --clr-secondary: hsl(251, 55%, 57%);
   --clr-tertiary: hsl(251, 97%, 86%);
   --clr-highlight: hsl(36, 100%, 50%);
+  --clr-success: hsl(121, 100%, 35%);
 
   --clr-shadow-black: hsla(0, 0%, 11%, 0.928);
   --clr-shadow-black-50: hsla(0, 0%, 11%, 0.5);
@@ -40,6 +41,9 @@ outline: 3px solid rgb(255, 0, 0);
   --clr-text-light: var(--clr-bg-primary);
 
   --clr-border: var(--clr-tertiary);
+  --clr-border-success: var(--clr-success);
+  --clr-border-warning: var(--clr-highlight);
+  --clr-border-error: var(--clr-alert);
 
   --ff-primary: 'Roboto', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 
@@ -83,8 +87,25 @@ body {
   background-color: var(--clr-bg-body);
 }
 
+input:not(:placeholder-shown):valid {
+  outline: 2px solid var(--clr-border-success);
+}
+
+input:not(:placeholder-shown):invalid {
+  outline: 2px solid var(--clr-border-error);
+}
+
+input:focus:invalid {
+  outline: 2px solid var(--clr-border-warning);
+}
+
 .App {
   text-align: initial;
+}
+
+.error-message {
+  color: var(--clr-alert);
+  font-size: var(--fs-xxs);
 }
 
 .btn {

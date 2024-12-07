@@ -3,14 +3,18 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { setUser } from '../../actions/index';
+import { MIN_PASSWORD_LENGTH } from '../../utils/constants';
+import { emailValidation, passwordValidation } from '../../utils/functions';
 
 class Login extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      disabled: true,
+      isButtonDisabled: true,
       email: '',
       password: '',
+      invalidEmail: '',
+      invalidPassword: '',
     };
   }
 
@@ -21,7 +25,7 @@ class Login extends React.Component {
     () => this.inputValidation());
   }
 
-  handleClick = () => {
+  handleLogin = () => {
     const { history, dispatchSetValue } = this.props;
     const { email } = this.state;
     dispatchSetValue(email);
@@ -30,18 +34,25 @@ class Login extends React.Component {
 
   inputValidation = () => {
     const { email, password } = this.state;
-    const minSizePassWord = 6;
-    const validEmail = (/^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/g);
+    const invalidEmail = emailValidation(email);
+    const invalidPassword = passwordValidation(password);
 
-    const btnState = (email.match(validEmail) && password.length >= minSizePassWord)
-      ? this.setState({ disabled: false })
-      : this.setState({ disabled: true });
-    return btnState;
+    this.setState({
+      isButtonDisabled: !(invalidEmail === '' && invalidPassword === ''),
+      invalidEmail,
+      invalidPassword,
+    });
   };
 
   render() {
-    const { disabled } = this.state;
-    const { email, password } = this.props;
+    const {
+      isButtonDisabled,
+      email,
+      password,
+      invalidEmail,
+      invalidPassword,
+    } = this.state;
+
     return (
       <div className="login__wrapper">
         <main className="login__container">
@@ -57,11 +68,14 @@ class Login extends React.Component {
                 id="email"
                 name="email"
                 onChange={ this.handleChange }
-                placeholder="your_email@email.com"
+                // pattern={ VALID_EMAIL }
+                placeholder="email@email.com"
+                required
                 type="email"
                 value={ email }
               />
             </label>
+            {(invalidEmail && <span className="error-message">{invalidEmail}</span>)}
             <label
               className="login-label"
               htmlFor="password"
@@ -71,18 +85,23 @@ class Login extends React.Component {
                 className="password login-input"
                 data-testid="password-input"
                 id="password"
+                minLength={ MIN_PASSWORD_LENGTH }
                 name="password"
                 onChange={ this.handleChange }
-                placeholder="your password"
+                placeholder="min. 6 caracteres"
+                required
                 type="password"
                 value={ password }
               />
             </label>
+            {(
+              invalidPassword
+              && <span className="error-message">{invalidPassword}</span>)}
           </section>
           <button
             className="btn"
-            disabled={ disabled }
-            onClick={ this.handleClick }
+            disabled={ isButtonDisabled }
+            onClick={ this.handleLogin }
             type="button"
           >
             Entrar
@@ -103,8 +122,6 @@ Login.propTypes = {
     push: PropTypes.func.isRequired,
   }).isRequired,
   dispatchSetValue: PropTypes.func.isRequired,
-  email: PropTypes.string.isRequired,
-  password: PropTypes.string.isRequired,
 };
 
 export default connect(null, mapDispatchToProps)(Login);
