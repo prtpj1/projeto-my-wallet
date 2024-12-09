@@ -1,17 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { v4 as uuidv4 } from 'uuid';
+import Select from '../Select';
+import Label from '../Label';
+import { METHOD_OPTIONS, TAG_OPTIONS } from '../../utils/constants';
 
 const NavBar = ({ formState, formActions, currencies }) => {
   const { value, currency, method, tag, description } = formState;
   const { handleChange, handleBlur, clearInput, handleClickAdd } = formActions;
   return (
     <nav className="nav">
-      <label
+      <Label
         className="nav__label"
         htmlFor="valor"
+        text="Valor:"
       >
-        Valor:
+
         <input
           className="nav__input nav__value"
           data-testid="value-input"
@@ -24,79 +27,58 @@ const NavBar = ({ formState, formActions, currencies }) => {
           type="number"
           value={ value }
         />
-      </label>
-      <label
+      </Label>
+      <Label
         className="nav__label"
         htmlFor="currency"
+        text="Moeda:"
       >
-        Moeda:
-        <select
-          className="nav__input nav__currency"
-          data-testid="currency-input"
+        <Select
+          className="nav__input"
           id="currency"
           name="currency"
           onChange={ handleChange }
+          options={ currencies }
           required
           value={ currency }
-        >
-          {currencies.map((option) => (
-            <option
-              key={ uuidv4() }
-              id={ option }
-              value={ option }
-            >
-              {option}
-            </option>
-          ))}
-        </select>
-      </label>
-      <label
-        className="nav__label"
+        />
+      </Label>
+      <Label
         htmlFor="method"
+        text="Método de Pagamento"
+        className="nav__label"
       >
-        Método de Pagamento:
-        <select
-          className="nav__input nav__method"
-          data-testid="method-input"
+        <Select
+          className="nav__input"
           id="method"
           name="method"
           onChange={ handleChange }
+          options={ METHOD_OPTIONS }
           required
           value={ method }
-        >
-          <option value="" disabled>Selecione uma opção</option>
-          <option>Dinheiro</option>
-          <option>Cartão de crédito</option>
-          <option>Cartão de débito</option>
-        </select>
-      </label>
-      <label
+        />
+      </Label>
+      <Label
         className="nav__label"
+        text="Tag:"
         htmlFor="tag"
       >
-        Tag:
-        <select
-          className="nav__input nav__tag"
-          data-testid="tag-input"
+        <Select
+          className="nav__input"
           id="tag"
           name="tag"
           onChange={ handleChange }
+          options={ TAG_OPTIONS }
           required
           value={ tag }
-        >
-          <option value="" disabled>Selecione uma opção</option>
-          <option>Alimentação</option>
-          <option>Lazer</option>
-          <option>Trabalho</option>
-          <option>Transporte</option>
-          <option>Saúde</option>
-        </select>
-      </label>
-      <label
+        />
+      </Label>
+      <Label
         className="nav__label-description"
         htmlFor="description"
+        text="Descrição:"
       >
-        Descrição:
+
         <input
           className="nav__input nav__input-description"
           data-testid="description-input"
@@ -108,7 +90,7 @@ const NavBar = ({ formState, formActions, currencies }) => {
           type="text"
           value={ description }
         />
-      </label>
+      </Label>
       <button
         className="btn btn__add-expense"
         onClick={ handleClickAdd }
