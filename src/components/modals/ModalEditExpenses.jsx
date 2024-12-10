@@ -4,6 +4,10 @@ import { connect } from 'react-redux';
 import { FaCheckCircle } from 'react-icons/fa';
 import { MdCancel } from 'react-icons/md';
 import { editExpense } from '../../actions';
+import Label from '../Label';
+import Select from '../Select';
+import { METHOD_OPTIONS, TAG_OPTIONS } from '../../utils/constants';
+import Button from '../Button';
 
 class ModalEditExpenses extends React.Component {
   constructor(props) {
@@ -71,96 +75,101 @@ class ModalEditExpenses extends React.Component {
           <h2 className="modal__title">Editar Despesas</h2>
           <form className="modal__form" onSubmit={ this.handleConfirm }>
 
-            <label htmlFor="value">
-              Valor:
+            <Label
+              className="modal__label"
+              htmlFor="valor"
+              text="Valor:"
+            >
+
               <input
+                className="modal__field modal__value"
+                data-testid="value-input"
+                id="valor"
                 name="value"
                 onChange={ this.handleChange }
                 required
                 type="number"
                 value={ value }
               />
-            </label>
-
-            <label htmlFor="currency">
-              Moeda:
-              <select
+            </Label>
+            <Label
+              className="modal__label"
+              htmlFor="currency"
+              text="Moeda:"
+            >
+              <Select
+                className="modal__field"
+                id="currency"
                 name="currency"
                 onChange={ this.handleChange }
+                options={ currencies }
                 required
-                type="text"
                 value={ currency }
-              >
-                {currencies.map((currencyElement) => (
-                  <option
-                    key={ currencyElement }
-                    value={ currencyElement }
-                  >
-                    {currencyElement}
-                  </option>
-                ))}
-              </select>
-            </label>
-
-            <label htmlFor="method">
-              Método:
-              <select
+              />
+            </Label>
+            <Label
+              htmlFor="method"
+              text="Método de Pagamento"
+              className="modal__label"
+            >
+              <Select
+                className="modal__field"
+                id="method"
                 name="method"
                 onChange={ this.handleChange }
+                options={ METHOD_OPTIONS }
                 required
-                type="text"
                 value={ method }
-              >
-                <option value="" disabled>Selecione uma opção</option>
-                <option value="Dinheiro">Dinheiro</option>
-                <option value="Cartão de Crédito">Cartão de Crédito</option>
-                <option value="Cartão de Débito">Cartão de Débito</option>
-              </select>
-            </label>
-
-            <label htmlFor="tag">
-              Tag:
-              <select
+              />
+            </Label>
+            <Label
+              className="modal__label"
+              text="Tag:"
+              htmlFor="tag"
+            >
+              <Select
+                className="modal__field"
+                id="tag"
                 name="tag"
                 onChange={ this.handleChange }
+                options={ TAG_OPTIONS }
                 required
-                type="text"
                 value={ tag }
-              >
-                <option value="" disabled>Selecione uma opção</option>
-                <option value="Alimentação">Alimentação</option>
-                <option value="Lazer">Lazer</option>
-                <option value="Trabalho">Trabalho</option>
-                <option value="Transporte">Transporte</option>
-                <option value="Saúde">Saúde</option>
-              </select>
-            </label>
+              />
+            </Label>
+            <Label
+              className="modal__label"
+              htmlFor="description"
+              text="Descrição:"
+            >
 
-            <label htmlFor="description">
-              Descrição:
               <input
+                className="modal__field modal__field-description"
+                data-testid="description-input"
+                id="description"
                 name="description"
                 onChange={ this.handleChange }
+                placeholder="Descreva ou nomeie a despesa"
                 required
                 type="text"
                 value={ description }
               />
-            </label>
+            </Label>
 
             <div className="modal__wrapper-btns">
-              <button
+              <Button
                 className="modal__btn btn-cancel"
                 onClick={ this.handleCancel }
                 type="button"
               >
                 <MdCancel size={ 32 } />
-              </button>
-              <button
+              </Button>
+              <Button
                 className="modal__btn btn-confirm"
                 type="submit"
               >
                 <FaCheckCircle size={ 32 } />
-              </button>
+              </Button>
             </div>
           </form>
         </div>

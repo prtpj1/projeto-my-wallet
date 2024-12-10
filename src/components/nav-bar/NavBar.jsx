@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Select from '../Select';
 import Label from '../Label';
 import { METHOD_OPTIONS, TAG_OPTIONS } from '../../utils/constants';
+import Button from '../Button';
 
 const NavBar = ({ formState, formActions, currencies }) => {
   const { value, currency, method, tag, description } = formState;
@@ -91,13 +92,20 @@ const NavBar = ({ formState, formActions, currencies }) => {
           value={ description }
         />
       </Label>
-      <button
+      <Button
         className="btn btn__add-expense"
         onClick={ handleClickAdd }
         type="submit"
       >
         Adicionar despesa
-      </button>
+      </Button>
+      {/* <button
+        className="btn btn__add-expense"
+        onClick={ handleClickAdd }
+        type="submit"
+      >
+        Adicionar despesa
+      </button> */}
     </nav>
   );
 };
