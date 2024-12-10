@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { FaCheckCircle } from 'react-icons/fa';
-import { MdCancel } from 'react-icons/md';
 import { editExpense } from '../../actions';
 import Label from '../Label';
 import Select from '../Select';
 import { METHOD_OPTIONS, TAG_OPTIONS } from '../../utils/constants';
-import Button from '../Button';
+import ModalButtons from './ModalButtons';
 
 class ModalEditExpenses extends React.Component {
   constructor(props) {
@@ -156,7 +154,11 @@ class ModalEditExpenses extends React.Component {
               />
             </Label>
 
-            <div className="modal__wrapper-btns">
+            <ModalButtons
+              onCancel={ this.handleCancel }
+              onConfirm={ this.handleConfirm }
+            />
+            {/* <div className="modal__wrapper-btns">
               <Button
                 className="modal__btn btn-cancel"
                 onClick={ this.handleCancel }
@@ -170,7 +172,7 @@ class ModalEditExpenses extends React.Component {
               >
                 <FaCheckCircle size={ 32 } />
               </Button>
-            </div>
+            </div> */}
           </form>
         </div>
       </div>
@@ -180,7 +182,7 @@ class ModalEditExpenses extends React.Component {
 
 ModalEditExpenses.propTypes = {
   expense: PropTypes.shape({
-    id: PropTypes.string,
+    id: PropTypes.number,
     value: PropTypes.string,
     currency: PropTypes.string,
     method: PropTypes.string,
