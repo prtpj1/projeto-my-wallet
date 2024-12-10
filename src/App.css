@@ -12,9 +12,10 @@ outline: 3px solid rgb(255, 0, 0);
 :root {
   --clr-alert: hsl(0, 100%, 35%);
   --clr-primary: hsl(251, 78%, 19%);
-  --clr-secondary: hsl(251, 55%, 57%);
+  --clr-secondary: hsl(251, 56%, 57%);
   --clr-tertiary: hsl(251, 97%, 86%);
-  --clr-highlight: hsl(36, 100%, 50%);
+  --clr-highlight: hsl(290, 56%, 57%);
+  --clr-warnning: hsl(35, 100%, 50%);
   --clr-success: hsl(121, 100%, 35%);
 
   --clr-shadow-black: hsla(0, 0%, 11%, 0.928);
@@ -42,7 +43,7 @@ outline: 3px solid rgb(255, 0, 0);
 
   --clr-border: var(--clr-tertiary);
   --clr-border-success: var(--clr-success);
-  --clr-border-warning: var(--clr-highlight);
+  --clr-border-warning: var(--clr-warnning);
   --clr-border-error: var(--clr-alert);
 
   --ff-primary: 'Roboto', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
@@ -96,6 +97,14 @@ input:not(:placeholder-shown):invalid {
 }
 
 input:focus:invalid {
+  outline: 2px solid var(--clr-border-warning);
+}
+
+select:invalid {
+  outline: 2px solid var(--clr-border-error);
+}
+
+select:focus:invalid {
   outline: 2px solid var(--clr-border-warning);
 }
 
