@@ -88,6 +88,11 @@
   background-color: var(--clr-highlight);
 }
 
+.modal__btn:disabled {
+  background-color: var(--clr-bg-disable);
+  cursor: not-allowed;
+}
+
 .btn-cancel {
   background-color: var(--clr-alert);
 }

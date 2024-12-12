@@ -6,6 +6,7 @@ import Label from '../Label';
 import Select from '../Select';
 import { METHOD_OPTIONS, TAG_OPTIONS } from '../../utils/constants';
 import ModalButtons from './ModalButtons';
+import { isFormValid } from '../../utils/functions';
 
 class ModalEditExpenses extends React.Component {
   constructor(props) {
@@ -61,6 +62,8 @@ class ModalEditExpenses extends React.Component {
   render() {
     const { currencies } = this.props;
     const { value, currency, method, tag, description } = this.state;
+
+    const formValid = isFormValid({ value, currency, method, tag, description });
 
     return (
       <div
@@ -155,6 +158,7 @@ class ModalEditExpenses extends React.Component {
             </Label>
 
             <ModalButtons
+              disabled={ !formValid }
               onCancel={ this.handleCancel }
               onConfirm={ this.handleConfirm }
             />

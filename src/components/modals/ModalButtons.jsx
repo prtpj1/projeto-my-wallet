@@ -4,7 +4,7 @@ import { FaCheckCircle } from 'react-icons/fa';
 import { MdCancel } from 'react-icons/md';
 import Button from '../Button';
 
-const ModalButtons = ({ onCancel, onConfirm }) => (
+const ModalButtons = ({ onCancel, onConfirm, disabled }) => (
   <div className="modal__wrapper-btns">
     <Button
       className="modal__btn btn-cancel"
@@ -15,6 +15,7 @@ const ModalButtons = ({ onCancel, onConfirm }) => (
     </Button>
     <Button
       className="modal__btn btn-confirm"
+      disabled={ disabled }
       onClick={ onConfirm }
       type="submit"
     >
@@ -26,6 +27,7 @@ const ModalButtons = ({ onCancel, onConfirm }) => (
 ModalButtons.propTypes = {
   onCancel: PropTypes.func.isRequired,
   onConfirm: PropTypes.func.isRequired,
+  disabled: PropTypes.bool.isRequired,
 };
 
 export default ModalButtons;

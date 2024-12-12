@@ -12,3 +12,11 @@ export const passwordValidation = (password) => {
   return validPassword ? '' : (`A senha deve ter no mínimo 
     ${MIN_PASSWORD_LENGTH} caracteres`);
 };
+
+export const isFormValid = ({
+  value,
+  currency,
+  method,
+  tag,
+  description,
+}) => Number(value) > 0 && currency && method && tag && description;

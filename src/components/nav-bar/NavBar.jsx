@@ -4,11 +4,12 @@ import Select from '../Select';
 import Label from '../Label';
 import { METHOD_OPTIONS, TAG_OPTIONS } from '../../utils/constants';
 import Button from '../Button';
+import { isFormValid } from '../../utils/functions';
 
 const NavBar = ({ formState, formActions, currencies }) => {
   const { value, currency, method, tag, description } = formState;
   const { handleChange, handleBlur, clearInput, handleClickAdd } = formActions;
-  const isFormValid = Number(value) > 0 && currency && method && tag && description;
+  const formValid = isFormValid({ value, currency, method, tag, description });
 
   return (
     <nav className="nav">
@@ -98,7 +99,7 @@ const NavBar = ({ formState, formActions, currencies }) => {
         className="btn btn__add-expense"
         onClick={ handleClickAdd }
         type="submit"
-        disabled={ !isFormValid }
+        disabled={ !formValid }
       >
         Adicionar despesa
       </Button>
