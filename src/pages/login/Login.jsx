@@ -57,6 +57,16 @@ class Login extends React.Component {
 
     return (
       <div className="login__wrapper">
+        <div className="info__container">
+          <h3>Aviso:</h3>
+          <p>
+            Esta aplicação possui apenas o frontend,
+            por tanto o email pode ser ficticio.
+          </p>
+          <p>
+            Qualquer email que você colocar, servirá!
+          </p>
+        </div>
         <main className="login__container">
           <section className="login-inputs__container">
             <label
