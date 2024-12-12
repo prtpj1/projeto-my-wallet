@@ -158,21 +158,6 @@ class ModalEditExpenses extends React.Component {
               onCancel={ this.handleCancel }
               onConfirm={ this.handleConfirm }
             />
-            {/* <div className="modal__wrapper-btns">
-              <Button
-                className="modal__btn btn-cancel"
-                onClick={ this.handleCancel }
-                type="button"
-              >
-                <MdCancel size={ 32 } />
-              </Button>
-              <Button
-                className="modal__btn btn-confirm"
-                type="submit"
-              >
-                <FaCheckCircle size={ 32 } />
-              </Button>
-            </div> */}
           </form>
         </div>
       </div>

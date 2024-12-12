@@ -8,6 +8,11 @@ export const USER = 'USER';
 export const EDIT_EXPENSE = 'EDIT_EXPENSE';
 export const DELETE_EXPENSE = 'DELETE_EXPENSE';
 
+export const setUserEmail = (email) => ({
+  type: USER,
+  payload: email,
+});
+
 export const requestWalletSuccess = (currencies) => ({
   type: FETCH_WALLET_OK,
   currencies,

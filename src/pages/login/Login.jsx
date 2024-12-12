@@ -28,6 +28,8 @@ class Login extends React.Component {
   handleLogin = () => {
     const { history, dispatchSetValue } = this.props;
     const { email } = this.state;
+
+    localStorage.setItem('useEmail', email);
     dispatchSetValue(email);
     history.push('/carteira');
   }
@@ -68,7 +70,6 @@ class Login extends React.Component {
                 id="email"
                 name="email"
                 onChange={ this.handleChange }
-                // pattern={ VALID_EMAIL }
                 placeholder="email@email.com"
                 required
                 type="email"

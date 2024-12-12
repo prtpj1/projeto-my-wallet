@@ -3,12 +3,13 @@
 import { USER } from '../actions/index';
 
 const INITIAL_STATE = {
-  email: '',
+  email: localStorage.getItem('userEmail') || '',
 };
 
 const user = (state = INITIAL_STATE, action) => {
   switch (action.type) {
   case USER:
+    localStorage.setItem('userEmail', action.payload);
     return {
       ...state,
       email: action.payload,

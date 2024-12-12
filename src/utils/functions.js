@@ -2,7 +2,6 @@ import { MIN_PASSWORD_LENGTH, VALID_EMAIL } from './constants';
 
 export const emailValidation = (email) => {
   const validEmail = VALID_EMAIL.test(email);
-  // const validEmail = email.match(VALID_EMAIL);
 
   return validEmail ? '' : 'Email inválido';
 };

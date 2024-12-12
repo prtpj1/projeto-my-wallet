@@ -48,6 +48,5 @@ const wallet = (state = INITIAL_STATE, action) => {
     return state;
   }
 };
-// console.log(FETCH_WALLET_OK);
 
 export default wallet;

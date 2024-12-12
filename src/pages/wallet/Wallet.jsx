@@ -24,6 +24,12 @@ class Wallet extends React.Component {
 
   componentDidMount() {
     const { dispatch } = this.props;
+    const savedEmail = localStorage.getItem('userEmail');
+
+    if (savedEmail) {
+      this.setState({ email: savedEmail });
+      dispatch({ type: 'USER', payload: savedEmail });
+    }
     dispatch(thunkFetchCurrencies());
   }
 

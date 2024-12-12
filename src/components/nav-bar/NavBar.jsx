@@ -8,6 +8,8 @@ import Button from '../Button';
 const NavBar = ({ formState, formActions, currencies }) => {
   const { value, currency, method, tag, description } = formState;
   const { handleChange, handleBlur, clearInput, handleClickAdd } = formActions;
+  const isFormValid = Number(value) > 0 && currency && method && tag && description;
+
   return (
     <nav className="nav">
       <Label
@@ -96,16 +98,10 @@ const NavBar = ({ formState, formActions, currencies }) => {
         className="btn btn__add-expense"
         onClick={ handleClickAdd }
         type="submit"
+        disabled={ !isFormValid }
       >
         Adicionar despesa
       </Button>
-      {/* <button
-        className="btn btn__add-expense"
-        onClick={ handleClickAdd }
-        type="submit"
-      >
-        Adicionar despesa
-      </button> */}
     </nav>
   );
 };
