@@ -8,7 +8,7 @@
 <a href="#in-this-project-i-learned-and-put-into-practice">Learning</a> •
 <a href="#according-to-the-project-requirements-designated-by-trybe-i-learned-how-to">Requirements</a> •
 <a href="#stacks">Stacks</a> •
-<a href="#how-to-run-the-application">How to run the application</a>
+<a href="#how-to-run-the-application-locally">How to run the application</a>
 </p>
 <hr/>
 <p align="center">
@@ -16,7 +16,7 @@
 <a href="#nesse-projeto-aprendi-e-coloquei-em-prática">Aprendizado</a> •
 <a href="#de-acordo-com-os-requisitos-do-projeto-designados-pela-trybe-aprendi-como">Requisitos</a> •
 <a href="#tecnologias-utilizadas">Tecnologias Utilizadas</a> •
-<a href="#como-rodar-a-aplicação">Rodar a Aplicação</a>
+<a href="#como-rodar-a-aplicação-localmente">Rodar a Aplicação</a>
 </p>
 <hr/>
 
