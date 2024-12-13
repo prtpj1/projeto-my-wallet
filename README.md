@@ -85,7 +85,7 @@ Therefore, it is important to switch between the version installed on your machi
 - Start the container in Docker: <br>
 `docker-compose up --build -d`
 
-⚠️ Wait for the application to open in your browser. If it doesn't, enter the following in the address bar of your browser: `http://localhost:3000` ⚠️
+⚠️ Wait for the application to open in your browser. If it doesn't, enter the following in the address bar of your browser: `http://localhost:3000`
 
 ## Used API Endpoint
 [AwesomeAPI](https://economia.awesomeapi.com.br/json/all)
@@ -160,7 +160,7 @@ Por isso é importante alternar entre a versão instalada na sua máquina e a ve
 - Suba o container para o Docker: <br>
 `docker-compose up --build -d`
 
-⚠️Aguarde a aplicação abrir no seu navegador. Caso não ocorra, coloque na barra de endereços do seu navegador: `http://localhost:3000`⚠️
+⚠️Aguarde a aplicação abrir no seu navegador. Caso não ocorra, coloque na barra de endereços do seu navegador: `http://localhost:3000`
 
 ## Endpoint da API utilizada
 [AwesomeAPI](https://economia.awesomeapi.com.br/json/all)
