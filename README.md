@@ -60,9 +60,9 @@ It is possible to add, edit, and delete expenses, select the currency, view the 
 <hr/>
 
 ## How to run the application locally?
-<strong> ⚠️ Read before attempting to run the project locally ⚠️</strong>
-This project uses Node 16.
-Therefore, it is important to switch between the version installed on your machine and the project version using the command `nvm use 16`.
+<strong> ⚠️ Read before attempting to run the project locally ⚠️</strong></br>
+This project uses Node 16.</br>
+Therefore, it is important to switch between the version installed on your machine and the project version using the command `nvm use 16`.</br>
 
 :whale: I recommend running the project via Docker as it is simpler :whale:
 
@@ -135,11 +135,11 @@ Fiz este projeto durante meu período de aprendizagem na Trybe onde desenvolvi u
 <hr/>
 
 ## Como rodar a aplicação localmente?
-<strong> ⚠️ Leia antes de tentar rodar o projeto localmente ⚠️</strong>
-Este projeto usa o node 16 
-Por isso é importante alternar entre a versão instalada na sua máquina e a versão do projeto através do comando `nvm use 16`
+<strong> ⚠️ Leia antes de tentar rodar o projeto localmente ⚠️</strong></br>
+Este projeto usa o node 16 </br>
+Por isso é importante alternar entre a versão instalada na sua máquina e a versão do projeto através do comando `nvm use 16`</br>
 
-:whale: Recomendo que você opte por rodar o projeto via docker por ser mais simples :whale:
+:whale: Recomendo que você opte por rodar o projeto via docker por ser mais simples :whale:</br>
 
 - Clone o repositório: <br>
 `git clone git@github.com:prtpj1/projeto-my-wallet.git`
