@@ -59,6 +59,9 @@ It is possible to add, edit, and delete expenses, select the currency, view the 
 <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/html2.png?raw=true" width="50" height="50" alt="HTML Icon" /></a><a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/CSS2.png?raw=true" width="50" height="50" alt="CSS3 Icon" /></a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/JavaScript2.png?raw=true" width="50" height="50" alt="JavaScript Icon" /></a><a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/React2.png?raw=true" width="50" height="50" alt="React Icon" /></a><a href="https://redux.js.org/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/Redux2.png?raw=true" width="50" height="50" alt="Redux Icon" /></a><a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/Docker2.png?raw=true" width="50" height="50" alt="Docker Icon" /></a>
 <hr/>
 
+## Link to View the Project's Website:
+[Project Website](https://my-wallet-mu-six.vercel.app/)
+
 ## How to run the application locally?
 <strong> ⚠️ Read before attempting to run the project locally ⚠️</strong></br>
 This project uses Node 16.</br>
@@ -89,9 +92,6 @@ Therefore, it is important to switch between the version installed on your machi
 
 ## Used API Endpoint
 [AwesomeAPI](https://economia.awesomeapi.com.br/json/all)
-
-## Link to View the Project's Website:
-[Project Website](https://my-wallet-mu-six.vercel.app/)
 </br>
 _*NOTE: If you encounter any difficulties with the instructions and would like to provide feedback, feel free to send me a message.*_
 <hr/>
@@ -134,6 +134,9 @@ Fiz este projeto durante meu período de aprendizagem na Trybe onde desenvolvi u
 <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/html2.png?raw=true" width="50" height="50" alt="HTML Icon" /></a><a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/CSS2.png?raw=true" width="50" height="50" alt="CSS3 Icon" /></a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/JavaScript2.png?raw=true" width="50" height="50" alt="JavaScript Icon" /></a><a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/React2.png?raw=true" width="50" height="50" alt="React Icon" /></a><a href="https://redux.js.org/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/Redux2.png?raw=true" width="50" height="50" alt="Redux Icon" /></a><a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="https://github.com/prtpj1/prtpj1/blob/main/Github%20Imgs/Docker2.png?raw=true" width="50" height="50" alt="Docker Icon" /></a>
 <hr/>
 
+## Link para visualizar a aplicação funcionando:
+[Site do Projeto](https://my-wallet-mu-six.vercel.app/)
+
 ## Como rodar a aplicação localmente?
 <strong> ⚠️ Leia antes de tentar rodar o projeto localmente ⚠️</strong></br>
 Este projeto usa o node 16 </br>
@@ -164,8 +167,5 @@ Por isso é importante alternar entre a versão instalada na sua máquina e a ve
 
 ## Endpoint da API utilizada
 [AwesomeAPI](https://economia.awesomeapi.com.br/json/all)
-
-## Link para visualizar o site do projeto:
-[Site do Projeto](https://my-wallet-mu-six.vercel.app/)
 </br>
 _*OBS: Se tiver alguma dificuldade com as instruções e quiser dar um feedback me mande uma mensagem*_
