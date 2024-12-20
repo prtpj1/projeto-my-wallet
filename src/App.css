@@ -1,92 +1,7 @@
-@import './pages/login/login.css';
-@import './components/header/header.css';
-@import './/components/nav-bar/nav-bar.css';
-@import './components/expense-table/expense-table.css';
-@import './components/github-repo/github-repo.css';
-@import './components/modals/modal-edit-expenses.css';
 /* 
 background-color: rgba(255, 0, 191, 0.549);
 outline: 3px solid rgb(255, 0, 0); 
 */
-
-:root {
-  --clr-alert: hsl(0, 100%, 35%);
-  --clr-primary: hsl(251, 78%, 19%);
-  --clr-secondary: hsl(251, 56%, 57%);
-  --clr-tertiary: hsl(251, 97%, 86%);
-  --clr-highlight: hsl(290, 56%, 57%);
-  --clr-warnning: hsl(35, 100%, 50%);
-  --clr-success: hsl(121, 100%, 35%);
-
-  --clr-shadow-black: hsla(0, 0%, 11%, 0.928);
-  --clr-shadow-black-50: hsla(0, 0%, 11%, 0.5);
-  --clr-shadow-colored: hsla(251, 100%, 73%, 0.385);
-
-  --clr-bg-primary: hsl(0, 0%, 95%);
-  --clr-bg-secondary: hsl(250, 100%, 41%);
-
-  --clr-bg-body: var(--clr-primary);
-  --clr-bg-button: var(--clr-bg-secondary);
-  --clr-bg-disable: var(--clr-tertiary);
-  --clr-bg-header: var(--clr-bg-primary);
-  --clr-bg-hover: var(--clr-secondary);
-  --clr-bg-focus: var(--clr-bg-secondary);
-  --clr-bg-nav: var(--clr-primary);
-  --clr-bg-table: var(--clr-bg-primary);
-  --clr-bg-table-even: var(--clr-tertiary);
-
-  --clr-text-primary: var(--clr-primary);
-  --clr-text-secondary: var(--clr-secondary);
-
-  --clr-text-button: var(--clr-bg-primary);
-  --clr-text-light: var(--clr-bg-primary);
-
-  --clr-border: var(--clr-tertiary);
-  --clr-border-success: var(--clr-success);
-  --clr-border-warning: var(--clr-warnning);
-  --clr-border-error: var(--clr-alert);
-
-  --ff-primary: 'Roboto', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-
-  --fs-xxs: 0.8rem;
-  --fs-xs: 1rem;
-  --fs-sm: 1.2rem;
-  --fs-md: 1.6rem;
-  --fs-lg: 1.8rem;
-  --fs-xl: 2rem;
-  --fs-2xl: 3rem;
-  --fs-3xl: 5rem;
-
-  --fw-bold: 900;
-  --fw-semi-bold: 700;
-  --fw-regular: 400;
-}
-
-* {
-  border: 0;
-  box-sizing: border-box;
-
-  margin: 0;
-  padding: 0;
-}
-
-*:focus {
-  outline: 4px solid var(--clr-highlight);
-}
-
-body {
-  display: flex;
-  align-content: center;
-  align-items: center;
-  overflow-x: hidden;
-  scrollbar-width: none;
-
-  color: var(--clr-primary);
-  font-family: var(--ff-primary);
-  font-size: 62.5%;
-
-  background-color: var(--clr-bg-body);
-}
 
 input:not(:placeholder-shown):valid {
   outline: 2px solid var(--clr-border-success);
@@ -121,7 +36,7 @@ select:focus:invalid {
   border-radius: 0.5rem;
   border-style: none;
 
-  width: 13rem;
+  max-width: 13rem;
   padding: 0.7rem 1rem;
 
   color: var(--clr-text-button);
