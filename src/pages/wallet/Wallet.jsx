@@ -18,7 +18,7 @@ class Wallet extends React.Component {
       method: '',
       tag: '',
       value: '1.00',
-      editExpense: true,
+      editExpense: null,
     };
   }
 
